@@ -6,7 +6,8 @@
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,14 +24,50 @@
         </classheader>
         <filename>
             LPK_Lives.cs
+            <!--Link to actual file -> download or view in webpage?-->
         </filename>
+        <classdescription>
+            This component can be added to any object to define its amount of lives and dispatches a LPK_OutOfLives event upon running out of them.
+            <!--Any mention of another class should be a link to that class page-->
+            <br><br> // more detailed description, how to use component // <br><br>
 
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Component Properties</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Lives</th>
+                        <td>Int</td>
+                        <td>Current number of lives.</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Target Display Object</th>
+                        <td>GameObject</td>
+                        <td>Target object to display the lives value.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+
+        </classdescription>
 
     </div>
 
-    <p>
-        This component can be added to any object to define its amount of lives and dispatches a LPK_OutOfLives event upon running out of them.
-    </p>
+
 
     <script src="side_bar_bottom.js"></script>
 
