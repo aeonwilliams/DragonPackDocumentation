@@ -115,7 +115,7 @@
 
 classheader {
     display: block;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
@@ -125,6 +125,57 @@ filename {
     display: block;
     font-size: 1em;
     margin-bottom: 2.33em;
+    margin-left: 1em;
+    margin-right: 0;
+    font-style: italic
+}
+
+body {
+    background-color: #f2f2f2
+}
+
+classdescription {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
+    font-size: 1.2em;
+}
+
+.table-light,
+.table-light>th,
+.table-light>td {
+    background-color: #fefdfd;
+    border: 1px solid #000;
+}
+
+.table-bordered {
+    border: 1px solid #000;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #000;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+    border: 1px solid #000;
+}
+
+.table .thead-light th {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    border: 1px solid #000;
+}
+
+.component-header {
+    color: #495057;
+    background-color: #495057;
+    border-color: #000;
+    border: 1px solid #000;
+    text-align: center;
 }
