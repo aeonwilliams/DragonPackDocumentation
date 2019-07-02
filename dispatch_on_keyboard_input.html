@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dispatch on Keyboard Input</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <!--Class Description Body-->
+    <div>
+
+        <!--Class Name-->
+        <classheader>
+            Dispatch on Keyboard Input
+        </classheader>
+
+        <!--LPK File Name-->
+        <filename>
+            LPK_DispatchOnKeyboardInput.cs
+        </filename>
+
+        <classdescription>
+            <!--Basic Description-->
+            <p>
+                Component to manage user input responses via keyboard.<br><br> Dispatches an event to the chosen receiver when the trigger key is activated as specified in the input mode.
+                <p>
+                    <font size="3px"><i>Note: Any input device, including controllers and mice will work with this component. However, unless you are using an obscure device that requires special mapping via Unity, it is recommended to use the components created specifically for each input device.</i></font>
+                </p>
+            </p>
+
+            <p>
+                <b>Suggested use:</b>
+            </p>
+
+            <!--In Depth Description-->
+            <p>
+                Dispatch events when the chosen keyboard key is pressed, released, or held down. Event triggered and objects that receive it are entirely chosen by the user.
+            </p>
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 1</a></b>
+            </p>
+
+
+            <!--Component Table-->
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Components</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Component Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Trigger Key</th>
+                        <td>Input Key</td>
+                        <td>What key will trigger the event dispatch.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Detect Any Key</th>
+                        <td>Boolean</td>
+                        <td>Set any key to trigger event dispatch. Overrides Trigger Key property.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Input Mode</th>
+                        <td>LPK Input Mode</td>
+                        <td>What kind of input interaction should cause the event dispatch.</td>
+                        <td>PRESSED</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Keyboard Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
+                        <td>OWNER</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch to the receiver when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </classdescription>
+
+        <!--Class Description Body-->
+    </div>
+
+    <!--Side Bar-->
+    <script src="side_bar_bottom.js"></script>
+</body>
