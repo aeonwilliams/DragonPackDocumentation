@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Dispatch on Mouse Input</title>
+    <title> DragonPack - Text Display</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,18 @@
 
         <!--Class Name-->
         <classheader>
-            Dispatch on Mouse Input
+            Text Display
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            LPK_DispatchOnMouseInput.cs
+            LPK_TextDisplay.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Component to manage user input responses via mice.<br><br> Dispatches an event when the conditions for the chosen mouse button are met.
+                This component controls the appearance of a text display that keeps track of a timer or counter.
             </p>
 
             <p>
@@ -57,7 +57,9 @@
 
             <!--In Depth Description-->
             <p>
-                Dispatch events when the chosen mouse button is pressed, released, or held down. Event triggered and objects that receive it are entirely chosen by the user.
+                Put on the same object as a <a href="https://docs.unity3d.com/ScriptReference/UI.Text.html" target="_blank">Unity Text</a> component and the <a href="counter.html" target="_blank">Counter</a> component you are displaying values of. Set
+                the display mode and beginning text (if desired).
+
             </p>
 
             <p>
@@ -83,25 +85,43 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">Mouse Button</th>
-                        <td>LPK Mouse Buttons</td>
-                        <td>Which mouse button will trigger sending the event. Note that Any does not detect scroll wheel.</td>
-                        <td>LEFT_BUTTON_PRESSED</td>
+                        <th scope="row">Beginning Text</th>
+                        <td>String</td>
+                        <td>Text to put before the display text. Ex: Score: </td>
+                        <td>" "</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Max Decimals</th>
+                        <td>Integer</td>
+                        <td>Max number of digits to display past the decimal.</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Display Mode</th>
+                        <td>LPK Display Mode</td>
+                        <td>What kind of component are you displaying the value of.</td>
+                        <td>TIMER</td>
                     </tr>
                     <thead class="component-breakpoint">
-                        <th colspan="4">Mouse Event Sending Info</th>
+                        <th colspan="4">Animation Settings - Counter Exclusive</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>OWNER</td>
+                        <th scope="row">Animate Counter</th>
+                        <td>Boolean</td>
+                        <td>Animate the counter cycling through values to the new value when it changes, instead of snapping to the new value.</td>
+                        <td>False</td>
                     </tr>
                     <tr>
-                        <th scope="row">Event</th>
-                        <td>LPK Event Object</td>
-                        <td>Event sent when the mouse gives input.</td>
-                        <td>None</td>
+                        <th scope="row">Animate First Display - Animate Counter Exclusive</th>
+                        <td>Boolean</td>
+                        <td>Should the first update to this counter be animated. This can be used to NOT animate setting the intitial value, if desired.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Animation Duration</th>
+                        <td>Integer</td>
+                        <td>How long to animate going from the old value to the new value.</td>
+                        <td>1</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>

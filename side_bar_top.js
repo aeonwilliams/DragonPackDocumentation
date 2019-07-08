@@ -18,6 +18,8 @@ document.write(`\
                     <li class="dragonpack-class"><a href="dispatch_on_mouse_input.html">Dispatch On Mouse Input</a></li>\
                     <li class="dragonpack-class"><a href="modify_counter_on_event.html">Modify Counter on Event</a></li>\
                     <li class="dragonpack-class"><a href="counter.html">Counter</a></li>\
+                    <li class="dragonpack-class"><a href="text_display.html">Text Display</a></li>\
+                    <li class="dragonpack-class"><a href="modify_sprite_on_event.html">Modify Sprite on Event</a></li>\
 \
                 </ul>\
             </li>\
