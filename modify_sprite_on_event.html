@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DragonPack - Modify Sprite on Event</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <!--Class Description Body-->
+    <div>
+
+        <!--Class Name-->
+        <classheader>
+            Modify Sprite on Event
+        </classheader>
+
+        <!--LPK File Name-->
+        <filename>
+            LPK_ModifySpriteOnEvent.cs
+        </filename>
+
+        <classdescription>
+            <!--Basic Description-->
+            <p>
+                On receiving an event, modify the properties of the owner sprite, or specified object's sprite.
+            </p>
+
+            <p>
+                <b>Suggested use:</b>
+            </p>
+
+            <!--In Depth Description-->
+            <p>
+                This component can be added to any object to cause it to modify an object's Sprite properties upon receiving an event.
+
+                <p>
+                    <font size="3px"><i>Note: If the Target Modify Objects <b>and</b> the Target Tags arrays are left at 0, the <b>owner</b> will automatically be the object modified. If one of them is set to greater than 0, the owner will have to be listed in order to be modified.</i></font>
+                </p>
+
+
+            </p>
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 1</a></b>
+            </p>
+
+            <!--Component Table-->
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Components</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Component Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Target Modify Objects</th>
+                        <td>Array of Objects</td>
+                        <td>Tagged object(s) whose sprite properties will be modified. Set to owner by default if both this and the tag object array are left empty.</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Target Tags</th>
+                        <td>Array of Objects</td>
+                        <td>Tagged object(s) whose sprite properties will be modified. Set to owner by default if both this and the game object array are left empty.</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Modify on Spawn</th>
+                        <td>Boolean</td>
+                        <td>Set to cause this component to set its modification on an object's spawn. This component will still react to set events.</td>
+                        <td>False</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Modifications</th>
+                    </thead>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Visible Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Visible Mode</th>
+                        <td>LPK Modify Mode</td>
+                        <td>How to modify visibility upon receiving the event.</td>
+                        <td>NONE</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Visible Mode - SET</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Visible</th>
+                        <td>Boolean</td>
+                        <td>New value to set visible flag to be.</td>
+                        <td>False</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Visible Mode - COPY</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Visible Copy Target</th>
+                        <td>Object</td>
+                        <td>Object whose visible flag will be copied to the recipient's property value. Only used if mode is set to copy. Default to self if this and the tag field are left unset.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visible Copy Tag</th>
+                        <td>Tag</td>
+                        <td>Object whose property value will be copied to the recipient's property value. Only used if mode is set to copy. Note this will only affect the first object with the tag found.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Color Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Color Mode</th>
+                        <td>LPK Modify Mode</td>
+                        <td>How to modify color upon receiving the event.</td>
+                        <td>NONE</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Color Mode - SET</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Color Value</th>
+                        <td>Color Value</td>
+                        <td>New value to set color to be.</td>
+                        <td>Black - RGB(0,0,0)</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Color Mode - COPY</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Color Copy Target</th>
+                        <td>Object</td>
+                        <td>Object whose color will be copied to the recipient's property value. Only used if mode is set to copy. Default to self if this and the tag field are left unset.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Color Copy Tag</th>
+                        <td>Tag</td>
+                        <td>Object whose color value will be copied to the recipient's color value. Only used if mode is set to copy. Note this will only affect the first object with the tag found.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Texture Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Texture Mode</th>
+                        <td>LPK Modify Mode</td>
+                        <td>How to modify texture upon receiving the event.</td>
+                        <td>NONE</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Texture Mode - SET</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">New Texture</th>
+                        <td>Sprite</td>
+                        <td>New sprite to set the texture to.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Texture Mode - COPY</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Texture Copy Target</th>
+                        <td>Object</td>
+                        <td>Object whose texture sprite will be copied to the recipient's texture sprite. Only used if mode is set to copy. Default to self if this and the tag field are left unset.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Texture Copy Tag</th>
+                        <td>Tag</td>
+                        <td>Object whose property value will be copied to the recipient's property value. Only used if mode is set to copy. Note this will only affect the first object with the tag found.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Material Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Material Mode</th>
+                        <td>LPK Modify Mode</td>
+                        <td>How to modify material upon receiving the event.</td>
+                        <td>NONE</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Material Mode - SET</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">New Material</th>
+                        <td>Material</td>
+                        <td>New material to set the material to.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Material Mode - COPY</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Material Copy Target</th>
+                        <td>Object</td>
+                        <td>Object whose material sprite will be copied to the recipient's material sprite. Only used if mode is set to copy. Default to self if this and the tag field are left unset.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Material Copy Tag</th>
+                        <td>Tag</td>
+                        <td>Object whose property value will be copied to the recipient's property value. Only used if mode is set to copy. Note this will only affect the first object with the tag found.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </classdescription>
+
+        <!--Class Description Body-->
+    </div>
+
+    <!--Side Bar-->
+    <script src="../side_bar_bottom.js"></script>
+</body>

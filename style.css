@@ -188,6 +188,14 @@ classdescription {
     text-align: center;
 }
 
+.component-breakpoint-light {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    border: 1px solid #000;
+    text-align: center;
+}
+
 .dragonpack-class {
     margin-left: 20px;
     margin-right: 20px;
