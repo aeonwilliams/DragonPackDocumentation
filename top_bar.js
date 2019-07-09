@@ -10,7 +10,7 @@ document.write(`\
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">\
         <div class="navbar-nav">\
             <a class="nav-item nav-link" href="download.html">Download</a>\
-            <a class="nav-item nav-link" href="documentation.html">Documentation</a>\
+            <a class="nav-item nav-link" href="example_projects.html">Documentation</a>\
         </div>\
     </div>\
 </nav>\ ` );

@@ -205,3 +205,23 @@ classdescription {
 .classlist {
     color: #fff;
 }
+
+.homepage {
+    font-size: 100px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.homepage2 {
+    font-size: 100px;
+    margin: auto;
+    width: 90%;
+}
+
+.download {
+    font-size: 100px;
+    margin: auto;
+    width: 60;
+    text-align: center;
+}
