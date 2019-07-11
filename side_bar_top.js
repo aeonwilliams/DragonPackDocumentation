@@ -29,6 +29,7 @@ document.write(`\
             <li><a href="modify_counter_on_event.html">Modify Counter on Event</a></li>\
             <li><a href="counter.html">Counter</a></li>\
             <li><a href="text_display.html">Text Display</a></li>\
+            <li><a href="modify_text_on_event.html">Modify Text on Event</a></li>\
             <li><a href="modify_sprite_on_event.html">Modify Sprite on Event</a></li>\
 \
         </ul>\
