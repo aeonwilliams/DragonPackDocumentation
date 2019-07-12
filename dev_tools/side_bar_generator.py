@@ -8,15 +8,21 @@ with open("class_list.txt") as file:
     for line in file: 
         line = line.lstrip()
         line = line.rstrip()
-        class_name_list.append(line)
+        if line not in class_name_list:
+            class_name_list.append(line)
         line = line.replace(" ", "_") 
         line = line.lower()
-        class_file_list.append(line)
+        line = line + ".html"
+        if line not in class_file_list:
+            class_file_list.append(line)
 
+""" class_name_list = list(dict.fromkeys(class_name_list))
+class_file_list = list(dict.fromkeys(class_file_list)) """
+class_name_list.sort()
 class_file_list.sort()
 
 for x in class_file_list:
-    with open("classes/" + x + ".html", "w") as file:
+    with open("classes/" + x, "w") as file:
         file.write(template_contents)
 
 with open("sidebar_components.html", "w") as file:
