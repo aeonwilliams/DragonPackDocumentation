@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Follow Game Object</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,21 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Follow Game Object
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_FollowGameObject.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component can be added to any object to cause it to follow another object's position.
+                <p>
+                    <font size="3px"><i>Note: This does so without any parenting.</i></font>
+                </p>
             </p>
 
             <p>
@@ -57,11 +60,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Apply to an enemy or pickup object to make it follow another specified object, such as the Player.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 2</a></b>
             </p>
 
             <!--Component Table-->
@@ -83,28 +86,49 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Follow Object</th>
+                        <td>Object</td>
+                        <td>Game object to follow. If deleted or set to null, this script will try to find a tagged object to follow.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Target Follow Tag</th>
+                        <td>Tag</td>
+                        <td>Tag to search for to find an object to follow, if the original Follow Object is deleted or set to null.</td>
+                        <td>Not Set</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Follow Type</th>
+                        <td>LPK_FollowType</td>
+                        <td>How this object will behave when following its target.</td>
+                        <td>ANCHOR_POINT</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Anchor Point</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Anchor Offset</th>
+                        <td>Vector3</td>
+                        <td>What offset to keep from the followed object.</td>
+                        <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Directional Offset</th>
+                        <td>Integer</td>
+                        <td>What offset to keep from the followed object. Used for every type except ANCHOR_POINT.</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Interpolation Factor</th>
+                        <td>Float</td>
+                        <td>What percentage of the distance between my current position and the target's should I move every frame.</td>
+                        <td>0.1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Become Child</th>
+                        <td>Boolean</td>
+                        <td>Set the object to become a child of whatever it is following.</td>
+                        <td>False</td>
                     </tr>
                 </tbody>
 

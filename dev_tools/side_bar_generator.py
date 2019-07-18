@@ -16,8 +16,6 @@ with open("class_list.txt") as file:
         if line not in class_file_list:
             class_file_list.append(line)
 
-""" class_name_list = list(dict.fromkeys(class_name_list))
-class_file_list = list(dict.fromkeys(class_file_list)) """
 class_name_list.sort()
 class_file_list.sort()
 

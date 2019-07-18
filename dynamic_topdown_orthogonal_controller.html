@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Dynamic Top Down Orthogonal Controller</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Dynamic Top Down Orthogonal Controller
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_DynamicTopDownOrthogonalController.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component replicates the movement functionality of top-down characters moving orthogonally at constant velocity. This uses a dynamic RigidBody.
             </p>
 
             <p>
@@ -57,11 +57,24 @@
 
             <!--In Depth Description-->
             <p>
-
+                Attach to an object, such as the Player, to enable top-down movement controls. Default input keys are WASD or arrow keys. The object will move at the given move speed in the direction pressed.
+                <p>
+                    <font size="3px"><i>Note: The movement will feel very floaty with the default input settings. It is suggested to copy the InputManager.asset from the DragonPack ProjectSettings into your project's Project Settings - however, this will reset any changes you've made. To maintain any changes you've made, manually input these numbers into the Input section of the Project Settings.:<br><br>
+                    Horizontal:<br>
+                    Gravity: 10000<br>
+                    Dead: 0.9<br>
+                    Sensitivity: 10000<br>
+                    <br>
+                    Vertical:<br>
+                    Gravity: 10000<br>
+                    Dead: 0.45<br>
+                    Sensitivity: 10000
+                    </i></font>
+                </p>
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 2</a></b>
             </p>
 
             <!--Component Table-->
@@ -83,31 +96,54 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Horizontal Input</th>
+                        <td>String</td>
+                        <td>Virtual button used to move left and right.</td>
+                        <td>Horizontal</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Vertical Input</th>
+                        <td>String</td>
+                        <td>Virtual button used to move up and down.</td>
+                        <td>Vertical</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Move Speed</th>
+                        <td>Integer</td>
+                        <td>Speed at which the character will move.</td>
+                        <td>8</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Face Velocity</th>
+                        <td>LPK Face Velocity Modes</td>
+                        <td>Whether this object should rotate to face the direction of movement.</td>
+                        <td>SNAP_TO_FACE</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Face Velocity - ROTATE_TO_FACE</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Rotation Speed</th>
+                        <td>Integer</td>
+                        <td>Speed at which the object will rotate to face the right direction.</td>
+                        <td>8</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
-
 
             </table>
         </classdescription>

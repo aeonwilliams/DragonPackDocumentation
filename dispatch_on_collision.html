@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Dispatch on Collision</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Dispatch on Collision
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_DispatchOnCollision.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component detects when a collision occurs with another game object. If the game object is valid as per specifications by the user, then an event is sent.
             </p>
 
             <p>
@@ -57,11 +57,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Add to an object to detect collision between the owner and a specified object or tag.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 2</a></b>
             </p>
 
             <!--Component Table-->
@@ -83,28 +83,53 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Collision Check Type</th>
+                        <td>LPK Collision Check Type</td>
+                        <td>What kind of collision should activate the event sending.</td>
+                        <td>COLLISION_ENTER</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Activator Names</th>
+                        <td>Array of Strings</td>
+                        <td>Names of game objects to activate collisions. If both properties are set to null any object will activate the event. Note this is an OR search with the Activator Tags.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Activator Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Names of tags to activate collisions. If both properties are set to null any object will activate the event. Note this is an OR search with the Activator Names</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Collision Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OTHER = only send to components on the game object that caused the collision. OWNER = only send to components on the same game object. ALL = send to all
+                            game objects</td>
+                        <td>OTHER</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch to the receiver when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

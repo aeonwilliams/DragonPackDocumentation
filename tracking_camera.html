@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Tracking Camera</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Tracking Camera
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_TrackingCamera.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component allows for a dynamic tracking camera in a 2D game.
             </p>
 
             <p>
@@ -57,11 +57,14 @@
 
             <!--In Depth Description-->
             <p>
-
+                Add to any perspective or orthogonal camera to make that camera follow the specified objects.
+                <p>
+                    <font size="3px"><i>Note: Will only follow an object with <a href="tracking_camera_object.html" target="_blank">Tracking Camera Object</a> on it.</i></font>
+                </p>
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 2</a></b>
             </p>
 
             <!--Component Table-->
@@ -83,28 +86,73 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Position Offset</th>
+                        <td>Vector3</td>
+                        <td>Offset to add to the end of the calculation on where the camera should look.</td>
+                        <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Follow Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Tags to follow, specifically. If set to 0, then all tags are followed.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Lock X Translation</th>
+                        <td>Boolean</td>
+                        <td>Lock X translation to disable movement of the camera in this axis.</td>
+                        <td>False</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Lock Y Translation</th>
+                        <td>Boolean</td>
+                        <td>Lock Y translation to disable movement of the camera in this axis.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Translation Movement</th>
+                        <td>Float</td>
+                        <td>Maximum allowed movement in translation per frame.</td>
+                        <td>0.2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Camera Size Scalar</th>
+                        <td>Float</td>
+                        <td>Max change in camera size per frame.</td>
+                        <td>0.2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Min Camera Size</th>
+                        <td>Float</td>
+                        <td>Minimum allowed size of the camera.</td>
+                        <td>6.5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Max Camera Size</th>
+                        <td>Float</td>
+                        <td>Maximum allowed size of the camera.</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Size Scalar Point</th>
+                        <td>Float</td>
+                        <td>Scalar for the alternation of camera size.</td>
+                        <td>10</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
