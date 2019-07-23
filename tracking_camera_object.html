@@ -59,7 +59,7 @@
             <p>
                 Add to any object to enable it to be followed by the camera that has <a href="tracking_camera.html" target="_blank">Tracking Camera</a> on it.
                 <p>
-                    <font size="3px"><i>Note: If all objects with this component have the same importance factor, the object that the component was put on most recently will be the one followed.</i></font>
+                    <font size="3px"><i>Note: If all objects with this component have the same importance factor, the camera will adjust itself to accommodate all objects, viewing the average of all their positions.</i></font>
                 </p>
             </p>
 
@@ -88,7 +88,7 @@
                     <tr>
                         <th scope="row">Tracking Type</th>
                         <td>LPK Object Track Type</td>
-                        <td>description</td>
+                        <td>Determines when the camera will start tracking this object. INSTANTANEOUS = immediately. DISTANCE = when the object is within a specified distance from the camera. VIEWPORT = when the object is within the viewport of the camera.</td>
                         <td>INSTANTANEOUS</td>
                     </tr>
                     <tr>
@@ -103,7 +103,7 @@
                     <tr>
                         <th scope="row">Max Add Distance</th>
                         <td>Float</td>
-                        <td>Distance at which to add objects to the camera.</td>
+                        <td>Distance that determines if an object should be tracked or not.</td>
                         <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
