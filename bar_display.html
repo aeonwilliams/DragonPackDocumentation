@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Bar Display</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,18 +37,19 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Bar Display
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_BarDisplay.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component controls the appearance of a display bar such as a health or cooldown bar. You can use this with sprites, images, or raw images. If using a sprite, set the pivot point in the Sprite Editor to determine how the bar should scale. This can
+                be done in the editor for raw images and images.
             </p>
 
             <p>
@@ -57,11 +58,12 @@
 
             <!--In Depth Description-->
             <p>
+                Create an Image UI object, and put the Sprite Renderer component on it. This allows you to use the Bar Display on a UI element. Connect to a <a href="counter.html" target="_blank">Counter</a> or <a href="timer.html" target="_blank">Timer</a>                to display their values using a bar that changes proportionally.
 
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 3</a></b>
             </p>
 
             <!--Component Table-->
@@ -83,28 +85,25 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Max X Scale</th>
+                        <td>Float</td>
+                        <td>Set the scale the bar sprite will be at when representing 100%. It should ideally match the scale of the sprite in the Rect Transform.</td>
+                        <td>1</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
