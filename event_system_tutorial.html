@@ -44,7 +44,7 @@
                 DragonPack utilizes a custom, dynamic event system for easy game customization with no scripting! This tutorial explains the basics of how to use it, using <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a>                and <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a>.
 
                 <p>
-                    <font size="3px"><i>This tutorial follows suggested practices for naming conventions and organization. You may feel free to omit whatever details you see fit.</i></font>
+                    <font size="3px"><i>This tutorial follows suggested practices for naming conventions and organization - you may name and organize how you see fit, but make sure it's consistent and everything makes sense!</i></font>
                 </p>
 
                 This is the project that was used to create this tutorial. Feel free to download it to mess around with, but remember that creating things from scratch is important to really learn things!
@@ -57,8 +57,8 @@
                 </h2>
 
                 <p>
-                    DragonPack has custom 'EventObject' objects that you create and name. Some components send events, and other components receive events. The name of your events doesn't matter, as long as the name makes sense to you so you don't get confused. Read the
-                    rest of this tutorial to learn how to use them!
+                    DragonPack has custom event objects (appropriately named: 'EventObject') that you create and name. Some components send events, and other components receive events. The name of your events doesn't matter, as long as the name makes sense to you so you
+                    don't get confused. Read the rest of this tutorial to learn how to use them!
                 </p>
             </div>
             <div>
@@ -67,7 +67,7 @@
                 </h2>
 
                 <p>
-                    Create a Unity project and import the DragonPack code package. Rename your scene if you would like to.
+                    Create a Unity project and import the DragonPack code package.
                     <br><br>
                     <img src="assets/EventSystemTutorial/1.PNG" height=90% width=90%>
                 </p>
@@ -79,7 +79,9 @@
 
                 <p>
                     For organization, create a folder in your Assets directory, and name it 'Events', or something that makes sense.
-                    <br><br>
+                    <ul style="list-style-type:disc;">
+                        <li>Right click in the blank space of the Assets folder in your Project window, and Create -> Folder.</li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/2.PNG">
                 </p>
             </div>
@@ -89,8 +91,10 @@
                 </h2>
 
                 <p>
-                    Right click in the empty space of your 'Events' folder, and go to Create->LPK->EventObject. This is how you make all "Events".
-                    <br><br>
+                    Create a folder to organize all of your event objects.
+                    <ul style="list-style-type:disc;">
+                        <li>Right click in the empty space of your 'Events' folder, and go to Create -> LPK -> EventObject. This is how you make all event objects.</li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/3.PNG" height=90% width=90%>
                 </p>
             </div>
@@ -100,9 +104,11 @@
                 </h2>
 
                 <p>
-                    Right click on the EventObject that you just made, and rename it something that makes sense. The name of the event should correspond with the conditions that determine when it gets sent. In this tutorial, we are dispatching an event when the space key
-                    is pressed, so the name of the event is 'SpacePressed'.
-                    <br><br>
+                    Rename the event object to something that makes sense. The name of the event should correspond with the conditions that determine when it gets sent. In this tutorial, we are dispatching an event when the space key is pressed, so the name of the event
+                    is 'SpacePressed'.
+                    <ul style="list-style-type:disc;">
+                        <li>Right click on the event object, and select Rename to name it something that makes sense in the context.</li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/4.PNG">
                 </p>
             </div>
@@ -112,8 +118,11 @@
                 </h2>
 
                 <p>
-                    Create an empty game object in your scene, and name it 'GameManager'. Add the <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a> component to it.
-                    <br><br>
+                    Create an empty game object to manage the inputs for the project.
+                    <ul style="list-style-type:disc;">
+                        <li>Click on GameObject -> Create Empty. Right click on it to rename it GameManager.</li>
+                        <li>Add the <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a> component to it.</li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/5_alt.PNG" height=90% width=90%>
                 </p>
             </div>
@@ -123,10 +132,13 @@
                 </h2>
 
                 <p>
-                    In this tutorial, we want to send an event when the space key is pressed. To make this happen, we will first change the Trigger Key to be 'Space'. Next, we're going to choose the event that will be sent. Set the 'Event' under 'KeyboardInputEvent' to be
-                    'SpacePressed'. Make sure Event Sending Mode is set to ALL. If it's set to OWNER, only components on the same object will be able to receive the event 'SpacePressed'. We're also going to check the box for Print Debug Info so we can
-                    confirm that the event is sent with the appropriate trigger.
-                    <br><br>
+                    In this project, we want to send an event when the space key is pressed. We need to alter the <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a> component to make this happen.
+                    <ul style="list-style-type:disc;">
+                        <li>Change the Trigger Key to be 'Space'.</li>
+                        <li>Set 'Event' under 'KeyboardInputEvent' to be 'SpacePressed', by clicking on the small circle.</li>
+                        <li>Make sure 'Event Sending Mode' is set to ALL. If it's set to OWNER, only components on the same object will be able to receive the event 'SpacePressed'.</li>
+                        <li>Check the box next to 'Print Debug Info' to print the event info to the console - if something goes wrong, we can use the console to confirm if the event is actually happening or not.</li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/6.PNG">
                 </p>
             </div>
@@ -136,7 +148,7 @@
                 </h2>
 
                 <p>
-                    Now, run the game and press the space bar. You should see this message in your console! If you don't, double check your names and component properties.
+                    Now, press the play button to run the game, then press the space bar. You should see this message in your console! If you don't, double check your names and component properties.
                     <br><br>
                     <img src="assets/EventSystemTutorial/7.PNG">
                 </p>
@@ -147,8 +159,15 @@
                 </h2>
 
                 <p>
-                    Create a 2D Sprite object and give it a sprite and name of your choosing. Add the <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a> component to it.
-                    <br><br>
+                    Console messages are cool, but we want something to actually happen in the game when the space bar is pressed! We're going to set things up so that a 2D object has it's sprite change.
+                    <ul style="list-style-type:disc;">
+                        <li>
+                            Click on GameObject -> 2D Object -> Sprite to create a 2D object. Rename it Player.
+                        </li>
+                        <li>
+                            Add the <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a> component to it.
+                        </li>
+                    </ul>
                     <img src="assets/EventSystemTutorial/8.PNG" height=90% width=90%>
                 </p>
             </div>
@@ -158,11 +177,20 @@
                 </h2>
 
                 <p>
-                    Under <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a>, there's lots of things you can change. In this tutorial, we are going to change the sprite of our object when the space bar is pressed. To do this,
-                    change the Texture Mode to SET under Sprite Properties. Set the new Texture/Sprite you want it to change to when the chosen event is received. Also, check Print Debug Info so we can confirm that the event is received.
-                    <br><br> Next, we need to tell it what event will trigger these changes. Under Event Receiving Info, change the Event Trigger to SpacePressed. Once this is done, our two components are connected! <a href="dispatch_on_keyboard_input.html"
-                        target="_blank">Dispatch on Keyboard Input</a> will send SpacePressed when the space key is pressed, and <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a> will modify our sprite when it receives SpacePressed.
-                    An infinite number of components can dispatch and receive the same events, but realistically, you don't want to have a lot of duplicates.
+                    We need to modify the <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a> to change the Player's sprite when it receives 'SpacePressed'.
+                    <ul style="list-style-type:disc;">
+                        <li>
+                            Under 'Sprite Properties', change texture mode to 'SET', and 'New Texture' to the sprite you want Player to be when the space bar is pressed. This well set the Player's sprite to the chosen new one!
+                        </li>
+                        <li>
+                            Check the box next to 'Print Debug Info'.
+                        </li>
+                        <li>
+                            Next, we need to tell it what event will trigger these changes. Under Event Receiving Info, change the Event Trigger to SpacePressed.
+                        </li>
+                    </ul>
+                    Now that this is done, our two components are connected! <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a> will send SpacePressed when the space key is pressed, and <a href="modify_sprite_on_event.html"
+                        target="_blank">Modify Sprite on Event</a> will modify our sprite when it receives SpacePressed. An infinite number of components can dispatch and receive the same events, but realistically, you don't want to have a lot of duplicates.
                     <br><br>
                     <img src="assets/EventSystemTutorial/9.PNG">
                 </p>
