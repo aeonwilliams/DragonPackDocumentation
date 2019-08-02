@@ -20,7 +20,7 @@
     position: fixed;
     left: 250px;
     width: 0;
-    height: 100%;
+    height: 90%;
     margin-left: -250px;
     overflow-y: auto;
     background: #000;
@@ -232,4 +232,8 @@ classdescription {
     margin: auto;
     width: 60;
     text-align: center;
+}
+
+.sidebar-sub {
+    list-style: none;
 }
