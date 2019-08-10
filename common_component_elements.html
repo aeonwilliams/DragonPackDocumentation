@@ -4,16 +4,25 @@
         <th colspan="4">Event Sending Info</th>
     </thead>
     <tr>
-        <th scope="row">Event Sending Mode</th>
-        <td>LPK Event Sending Mode</td>
-        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-        <td>ALL</td>
-    </tr>
-    <tr>
         <th scope="row">Event</th>
         <td>LPK Event Object</td>
         <td>Event to dispatch to the receiver when conditions are met.</td>
         <td>None</td>
+    </tr>
+    <tr>
+        <th scope="row">Event Sending Mode</th>
+        <td>LPK Event Sending Mode</td>
+        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+        <td>TAGS</td>
+    </tr>
+    <thead class="component-breakpoint-light">
+        <th colspan="4">Event Sending Mode - TAGS</th>
+    </thead>
+    <tr>
+        <th scope="row">Tags</th>
+        <td>Array of Tags</td>
+        <td>Which tags will receive this event.</td>
+        <td>0</td>
     </tr>
 </div>
 

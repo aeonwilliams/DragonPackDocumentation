@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Aggressive Path Follower</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Aggressive Path Follower
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_AggressivePathFollower.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component causes its gameobject to follow a pre-determined path by the designer. This object will also be aggressive to a set GameObject or tag.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Create a path of game object nodes, and assign them in the correct component property location. Create an object (enemy, pickup, etc) to either chase or run away from an approaching object.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 4</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,35 +85,140 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Loop Type</th>
+                        <td>LPK Path Follower Loop Type</td>
+                        <td>How to handle path looping once the end of the path is reached.</td>
+                        <td>SINGLE</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Speed</th>
+                        <td>Float</td>
+                        <td>Speed (units per second) to move along the path.</td>
+                        <td>5</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Aggression Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Enemies</th>
+                        <td>Array of Objects</td>
+                        <td>Objects to attack/run from if set.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Enemy Tag</th>
+                        <td>Array of Strings</td>
+                        <td>Tag enemies will have. Useful if this path follower should react to multiple different GameObjects.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Aggression Range</th>
+                        <td>Float</td>
+                        <td>Distance at which the character becomes aggressive.</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Aggression Speed</th>
+                        <td>Float</td>
+                        <td>Speed (units per second) the object will move at while aggressive.</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Is Coward</th>
+                        <td>Boolean</td>
+                        <td>"Run from the enemy instead of running towards the enemy.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Don't Forget</th>
+                        <td>Boolean</td>
+                        <td>Once an enemy is found, do not forget about it.</td>
+                        <td>False</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Nodes</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Nodes</th>
+                        <td>Array of Objects</td>
+                        <td>Nodes that make up the path to follow. They can be Unity object.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Sending Info</th>
+                    </thead>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Options</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">PathFollowerNoticeEnemyEvent</th>
+                        <td>Event Conditions</td>
+                        <td>Event sent when the path follower notices an enemy.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">PathFollowerLostEnemyEvent</th>
+                        <td>Event Conditions</td>
+                        <td>Event sent when the path follower looses an enemy.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">PathFollowerReachNodeEvent</th>
+                        <td>Event Conditions</td>
+                        <td>Event sent when the path follower reaches a node in its path.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">PathFollowerReachFinalNodeEvent</th>
+                        <td>Event Conditions</td>
+                        <td>Event sent when the path follower reaches the final node in its current path.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Values</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch to the receiver when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>ALL</td>
+                    </tr>
+                    <thead class="component-breakpoint-lighter">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

@@ -50,8 +50,7 @@
         <classdescription>
             <!--Basic Description-->
             <p>
-                Activates the OnEvent function on other scripts when this object calls it's start function.
-
+                Dispatches an event as soon as the game starts.
             </p>
 
             <p>
@@ -86,16 +85,25 @@
                         <th colspan="4">Start Event Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>ALL</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event to dispatch at the start of the game.</td>
                         <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
@@ -118,7 +126,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

@@ -50,7 +50,7 @@
         <classdescription>
             <!--Basic Description-->
             <p>
-                This component can be added to any object to have it track a value relevant to the game. That value might be a collectible, currency, score, etc.
+                This component can be added to any object to have it track a value relevant to the game. That value might be a health, currency, score, etc.
 
             </p>
 
@@ -60,9 +60,9 @@
 
             <!--In Depth Description-->
             <p>
-                Use on the same object as <a href="modify_counter_on_event.html" target="_blank">Modify Counter on Event</a> to change the value of the counter on the given event - use the counter to dispatch events once it reaches a certain value or
-                threshold. Use a
-                <a href="text_display.html" target="_blank">Text Display</a> component to easily display the value of the counter.
+                Use with a <a href="modify_counter_on_event.html" target="_blank">Modify Counter on Event</a> component to change the value of the counter on the given event. The counter can dispatch events once it reaches a certain value or threshold.
+                Use a
+                <a href="text_display.html" target="_blank">Text Display</a>, <a href="bar_display.html" target="_blank">Bar Display</a>, <a href="radial_display.html" target="_blank">Radial Display</a>, or an <a href="object_display.html" target="_blank">Object Display</a>                component to easily display the value of the counter.
             </p>
 
             <p>
@@ -124,7 +124,10 @@
                         <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
-                        <th colspan="4">Event Sending Info - Conditions</th>
+                        <th colspan="4">Event Sending Info</th>
+                    </thead>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Options</th>
                     </thead>
                     <tr>
                         <th scope="row">Counter Threshold Event</th>
@@ -156,34 +159,43 @@
                         <td>Event sent when the counter's value hits is minimum value.</td>
                         <td>N/A</td>
                     </tr>
-                    <thead class="component-breakpoint">
-                        <th colspan="4">Event Sending Info - Values</th>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Values</th>
                     </thead>
-                    <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>ALL</td>
-                    </tr>
                     <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event to dispatch to the receiver when conditions are met.</td>
                         <td>None</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-lighter">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Displays</th>
                     </thead>
                     <tr>
-                        <th scope="row">Size</th>
-                        <td>Integer</td>
-                        <td>The number of display components to connec to this counter.</td>
+                        <th scope="row">Display Components</th>
+                        <td>Array of Objects</td>
+                        <td>Which display components to connect to this counter and display it's values.</td>
                         <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">Element N</th>
+                        <th scope="row">Display Components N</th>
                         <td>Object</td>
-                        <td>Which display object(s) to connec to this counter to display the value.</td>
+                        <td>A display component to display this counter's value.</td>
                         <td>None</td>
                     </tr>
                     <thead class="component-breakpoint">
@@ -207,7 +219,7 @@
             </table>
 
 
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a>
 

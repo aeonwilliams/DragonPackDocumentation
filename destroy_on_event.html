@@ -87,14 +87,8 @@
                     <tr>
                         <th scope="row">Destruction Targets</th>
                         <td>Array of Objects</td>
-                        <td>Game object(s) to destroy on receiving event. If this and tags aren't set, the owner will be the target.</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Destruction Tags</th>
-                        <td>Array of Tags</td>
-                        <td>Game object(s) to destroy on receiving event. If this and tags aren't set, the owner will be the target.</td>
-                        <td>0</td>
+                        <td>Game object(s) to destroy on receiving event.</td>
+                        <td>Owner</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Event Receiving Info</th>
@@ -109,17 +103,27 @@
                         <th colspan="4">Event Sending Info</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>ALL</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event to dispatch to the receiver when conditions are met.</td>
                         <td>None</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
                     </thead>
@@ -140,7 +144,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

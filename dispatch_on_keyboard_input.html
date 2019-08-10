@@ -50,7 +50,7 @@
         <classdescription>
             <!--Basic Description-->
             <p>
-                Component to manage user input responses via keyboard.<br><br> Dispatches an event to the chosen receiver when the trigger key is activated as specified in the input mode.
+                Component to manage user input responses via keyboard.
                 <p>
                     <font size="3px"><i>Note: Any input device, including controllers and mice will work with this component. However, unless you are using an obscure device that requires special mapping via Unity, it is recommended to use the components created specifically for each input device.</i></font>
                 </p>
@@ -62,7 +62,7 @@
 
             <!--In Depth Description-->
             <p>
-                Dispatch events when the chosen keyboard key is pressed, released, or held down. Event triggered and objects that receive it are entirely chosen by the user.
+                Dispatch events when the chosen keyboard key is pressed, released, or held down.
             </p>
 
             <p>
@@ -89,17 +89,18 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">Trigger Key</th>
-                        <td>Input Key</td>
-                        <td>What key will trigger the event dispatch.</td>
-                        <td>None</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Detect Any Key</th>
                         <td>Boolean</td>
                         <td>Set any key to trigger event dispatch. Overrides Trigger Key property.</td>
                         <td>False</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Trigger Key</th>
+                        <td>Input Key</td>
+                        <td>What key will trigger the event dispatch.</td>
+                        <td>None</td>
+                    </tr>
+
                     <tr>
                         <th scope="row">Input Mode</th>
                         <td>LPK Input Mode</td>
@@ -110,16 +111,25 @@
                         <th colspan="4">Keyboard Event Sending Info</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>ALL</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event to dispatch to the receiver when conditions are met.</td>
                         <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
@@ -141,7 +151,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

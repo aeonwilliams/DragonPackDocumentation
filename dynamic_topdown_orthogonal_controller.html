@@ -61,17 +61,15 @@
             <p>
                 Attach to an object, such as the Player, to enable top-down movement controls. Default input keys are WASD or arrow keys. The object will move at the given move speed in the direction pressed.
                 <p>
-                    <font size="3px"><i>Note: The movement will feel very floaty with the default input settings. It is suggested to copy the InputManager.asset from the DragonPack ProjectSettings into your project's Project Settings - however, this will reset any changes you've made. To maintain any changes you've made, manually input these numbers into the Input section of the Project Settings.:<br><br>
-                    Horizontal:<br>
-                    Gravity: 10000<br>
-                    Dead: 0.9<br>
-                    Sensitivity: 10000<br>
-                    <br>
-                    Vertical:<br>
-                    Gravity: 10000<br>
-                    Dead: 0.45<br>
-                    Sensitivity: 10000
-                    </i></font>
+                    <font size="3px"><i>Note: The movement will feel very floaty with the default input settings. It is suggested to copy the InputManager.asset from the DragonPack ProjectSettings into your project's Project Settings - however, this will reset any changes you've made. To maintain any changes you've made, manually input these numbers into the Input section of the Project Settings:
+                        <pre>
+    <b>Horizontal:             Vertical:</b>
+    Gravity: 10000          Gravity: 10000
+    Dead: 0.9               Dead: 0.45
+    Sensitivity: 10000      Sensitivity: 10000
+                        </pre>
+                   </i>
+                    </font>
                 </p>
             </p>
 
@@ -115,21 +113,6 @@
                         <td>Speed at which the character will move.</td>
                         <td>8</td>
                     </tr>
-                    <tr>
-                        <th scope="row">Face Velocity</th>
-                        <td>LPK Face Velocity Modes</td>
-                        <td>Whether this object should rotate to face the direction of movement.</td>
-                        <td>SNAP_TO_FACE</td>
-                    </tr>
-                    <thead class="component-breakpoint-light">
-                        <th colspan="4">Face Velocity - ROTATE_TO_FACE</th>
-                    </thead>
-                    <tr>
-                        <th scope="row">Rotation Speed</th>
-                        <td>Integer</td>
-                        <td>Speed at which the object will rotate to face the right direction.</td>
-                        <td>8</td>
-                    </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
                     </thead>
@@ -149,7 +132,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

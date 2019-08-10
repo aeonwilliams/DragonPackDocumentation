@@ -59,7 +59,7 @@
 
             <!--In Depth Description-->
             <p>
-                Add to an object to detect collision between the owner and a specified object or tag.
+                Add to an object to detect collision between the owner and a specified object, and send an event when they collide.
             </p>
 
             <p>
@@ -91,32 +91,32 @@
                         <td>COLLISION_ENTER</td>
                     </tr>
                     <tr>
-                        <th scope="row">Activator Names</th>
-                        <td>Array of Strings</td>
-                        <td>Names of game objects to activate collisions. If both properties are set to null any object will activate the event. Note this is an OR search with the Activator Tags.</td>
+                        <th scope="row">Activator Game Objects</th>
+                        <td>Array of Objects</td>
+                        <td>Game objects to activate collisions. If this and tags are left empty, any object will activate the event.</td>
                         <td>0</td>
                     </tr>
                     <tr>
                         <th scope="row">Activator Tags</th>
                         <td>Array of Tags</td>
-                        <td>Names of tags to activate collisions. If both properties are set to null any object will activate the event. Note this is an OR search with the Activator Names</td>
+                        <td>Names of tags to activate collisions. If this and objects are left empty, any object will activate the event.</td>
                         <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Collision Event Sending Info</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OTHER = only send to components on the game object that caused the collision. OWNER = only send to components on the same game object. ALL = send to all
-                            game objects</td>
-                        <td>OTHER</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event to dispatch to the receiver when conditions are met.</td>
                         <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OTHER = only send to components on the game object that caused the collision. OWNER = only send to components on the same game object. ALL = send to all
+                            game objects. TAGS = send to specified tags.</td>
+                        <td>OTHER</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
@@ -138,7 +138,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

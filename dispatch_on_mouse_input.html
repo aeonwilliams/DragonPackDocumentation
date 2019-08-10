@@ -50,7 +50,7 @@
         <classdescription>
             <!--Basic Description-->
             <p>
-                Component to manage user input responses via mice.<br><br> Dispatches an event when the conditions for the chosen mouse button are met.
+                Component to manage user input responses via mice.
             </p>
 
             <p>
@@ -59,7 +59,7 @@
 
             <!--In Depth Description-->
             <p>
-                Dispatch events when the chosen mouse button is pressed, released, or held down. Event triggered and objects that receive it are entirely chosen by the user.
+                Dispatch events when the chosen mouse button is pressed, released, or held down.
             </p>
 
             <p>
@@ -87,23 +87,32 @@
                     <tr>
                         <th scope="row">Mouse Button</th>
                         <td>LPK Mouse Buttons</td>
-                        <td>Which mouse button will trigger sending the event. Note that Any does not detect scroll wheel.</td>
+                        <td>Which mouse button will trigger sending the event.</td>
                         <td>LEFT_BUTTON_PRESSED</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Mouse Event Sending Info</th>
                     </thead>
                     <tr>
-                        <th scope="row">Event Sending Mode</th>
-                        <td>LPK Event Sending Mode</td>
-                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects.</td>
-                        <td>ALL</td>
-                    </tr>
-                    <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
                         <td>Event sent when the mouse gives input.</td>
                         <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
                         <th colspan="4">Debug Properties</th>
@@ -125,7 +134,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 

@@ -59,10 +59,7 @@
 
             <!--In Depth Description-->
             <p>
-                Add to any perspective or orthogonal camera to make that camera follow the specified objects.
-                <p>
-                    <font size="3px"><i>Note: Will only follow an object with <a href="tracking_camera_object.html" target="_blank">Tracking Camera Object</a> on it.</i></font>
-                </p>
+                Add to any perspective or orthogonal camera to make that camera follow the specified objects. It will only follow an object with <a href="tracking_camera_object.html" target="_blank">Tracking Camera Object</a> on it.
             </p>
 
             <p>
@@ -90,14 +87,14 @@
                     <tr>
                         <th scope="row">Position Offset</th>
                         <td>Vector3</td>
-                        <td>Offset to add to the end of the calculation on where the camera should look.</td>
+                        <td>Offset of where the camera should look.</td>
                         <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">Follow Tags</th>
-                        <td>Array of Tags</td>
-                        <td>Tags to follow, specifically. If set to 0, then all tags are followed.</td>
-                        <td>0</td>
+                        <th scope="row">Max Track Distance</th>
+                        <td>Float</td>
+                        <td>Distance at which tracked game objects will not be factored into determining the camera's position.</td>
+                        <td>Infinity</td>
                     </tr>
                     <tr>
                         <th scope="row">Lock X Translation</th>
@@ -161,7 +158,7 @@
 
             </table>
             <br>
-            <a style="font-size: x-small"> Last updated: 07/08/19</a>
+            <a style="font-size: x-small"> Last updated: 08/08/19</a>
             <br>
             <a style="font-size: x-small"> Consistent with version 2.0.6</a> </classdescription>
 
