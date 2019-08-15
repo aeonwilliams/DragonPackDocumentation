@@ -50,7 +50,7 @@
         <classdescription>
             <!--Basic Description-->
             <p>
-                This component causes its gameobject to follow a pre-determined path by the designer. This object will also be aggressive to a set GameObject or tag.
+                This component causes its game object to follow a pre-determined path by the designer. This object will also be aggressive to a set GameObject or tag.
             </p>
 
             <p>
@@ -135,13 +135,10 @@
                         <td>Once an enemy is found, do not forget about it.</td>
                         <td>False</td>
                     </tr>
-                    <thead class="component-breakpoint">
-                        <th colspan="4">Nodes</th>
-                    </thead>
                     <tr>
                         <th scope="row">Nodes</th>
                         <td>Array of Objects</td>
-                        <td>Nodes that make up the path to follow. They can be Unity object.</td>
+                        <td>Nodes that make up the path to follow. They can be any Unity object.</td>
                         <td>0</td>
                     </tr>
                     <thead class="component-breakpoint">
@@ -180,14 +177,23 @@
                     <tr>
                         <th scope="row">Event</th>
                         <td>LPK Event Object</td>
-                        <td>Event to dispatch to the receiver when conditions are met.</td>
+                        <td>Event to dispatch when conditions are met.</td>
                         <td>None</td>
                     </tr>
                     <tr>
                         <th scope="row">Event Sending Mode</th>
                         <td>LPK Event Sending Mode</td>
                         <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
-                        <td>ALL</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
                     </tr>
                     <thead class="component-breakpoint-lighter">
                         <th colspan="4">Event Sending Mode - TAGS</th>

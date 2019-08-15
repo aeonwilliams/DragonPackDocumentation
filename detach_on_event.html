@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Detach on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Detach on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_DetachOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                Detach an object from all objects it is a child to.
             </p>
 
             <p>
@@ -59,11 +59,27 @@
 
             <!--In Depth Description-->
             <p>
-
+                Use with <a href="attach_on_event.html" target="_blank">Attach on Event</a> to alter the hierarchy.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <font size="3px"><i>Caveats: 
+                            <ul>
+                                <li>
+                                    No auto-detaching happens behind the scenes.
+                                </li>
+                                <li>
+                                    If an object is a child to a child x deep into the hierarchy, and this component is used, it will be detached from ALL objects.
+                                </li>
+                                <li>
+                                    If an object with children is detached from an object, it's relationship with it's children will stay the same.
+                                </li>
+                            </ul>
+                        </i></font>
+            </p>
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 4</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +101,64 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Detach Game Object</th>
+                        <td>Game Object</td>
+                        <td>Game object to detach from parent. If this and tag are empty, the owner will be detached from it's parent.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Detach Tag</th>
+                        <td>Tag</td>
+                        <td>Tag of the object to detach from parent. If this and game object are empty, the owner will be detached from it's parent.</td>
+                        <td>Untagged</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Detach Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

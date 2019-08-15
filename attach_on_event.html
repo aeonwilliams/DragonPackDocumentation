@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Attach on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,21 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Attach on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_AttachOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component causes an object to be attached (parented) to another upon receiving a specified event. It will not be un-parented until <a href="detach_on_event.html" target="_blank">Detach on Event</a> is used.
+            </p>
+            <p>
+                <font size="3px"><i>If the event received is sent to and received by multiple objects, the child will only be parented to one of them, which will alter the behavior of the child accordingly. To mitigate this happening, set the event sending mode wisely.</i></font>
             </p>
 
             <p>
@@ -59,11 +62,28 @@
 
             <!--In Depth Description-->
             <p>
-
+                Use another component to send the event that will trigger an object being parented to another object. You can additionally send an event when the objects are "attached" to each other.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <font size="3px"><i>Caveats: 
+                    <ul>
+                        <li>
+                            If the target child is already a child of another object, it will be parented to the target parent, then returned to level 0 of the hierarchy, instead of returning to being a child to it's original parent object (if <a href="detach_on_event.html" target="_blank">Detach on Event</a> is used).
+                        </li>
+                        <li>
+                            A child and parent will not automatically switch places unless they are manually detached first.
+                        </li>
+                        <li>
+                            If an object with children is attached to another object, it's children will stay attached as sub children.
+                        </li>
+                    </ul>
+                </i></font>
+            </p>
+
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 4</a></b>
             </p>
 
             <!--Component Table-->
@@ -84,29 +104,80 @@
                     <thead class="component-breakpoint">
                         <th colspan="4">Component Properties</th>
                     </thead>
+                    <thead class="component-breakpoint-lighter">
+                        <th colspan="4"><i>If child and parent objects and tags are left empty, the game will break, because the owner cannot be the parent and the child simultaneously.</i></th>
+                    </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Parent</th>
+                        <td>Game Object</td>
+                        <td>Parent game object to attach the child to. If this and parent tag are empty, the owner will be the parent.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Parent Tag</th>
+                        <td>Tag</td>
+                        <td>Tag of the parent object to attach the child to. If this and parent object are empty, the owner will be the parent.</td>
+                        <td>Untagged</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Child</th>
+                        <td>Game Object</td>
+                        <td>Child to attach to the parent. If this and child tag are empty, the owner will be the child.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Child Tag</th>
+                        <td>Tag</td>
+                        <td>Tag of the child object to attach to the parent. If this and child object are empty, the owner will be the child.</td>
+                        <td>Untagged</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

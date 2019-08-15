@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Timer</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Timer
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_Timer.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                Ticks up or down with the given restraints, with the capability of sending events and displaying the value. Begins ticking when the object it's on gets created.
             </p>
 
             <p>
@@ -59,11 +59,12 @@
 
             <!--In Depth Description-->
             <p>
-
+                Count up or down to control the timing of when events get sent out. Use a
+                <a href="text_display.html" target="_blank">Text Display</a>, <a href="bar_display.html" target="_blank">Bar Display</a>, <a href="radial_display.html" target="_blank">Radial Display</a>, or an <a href="object_display.html" target="_blank">Object Display</a>                component to easily display the value of the timer.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 4</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +86,73 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Timer Policy</th>
+                        <td>LPK Timer Policy</td>
+                        <td>How to behave when the timer reaches MaxTime.</td>
+                        <td>STOP</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Timer Type</th>
+                        <td>LPK Count Type</td>
+                        <td>Determine if the timer should count up or down.</td>
+                        <td>COUNTUP</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Duration</th>
+                        <td>Float</td>
+                        <td>Maximum time (in seconds) should the timer track. Will send a LPK_TimerCompleted event when done.</td>
+                        <td>2</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Variance</th>
+                        <td>Float</td>
+                        <td>Allows a randomized variance to be applied to the Duration for each cycle of the timer.</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Start Delay</th>
+                        <td>Float</td>
+                        <td>How long to wait until the timer starts counting (in seconds).</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Timer Completed Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
