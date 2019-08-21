@@ -237,3 +237,14 @@ classdescription {
 .sidebar-sub {
     list-style: none;
 }
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+}
+
+/* #495057;*/

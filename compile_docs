@@ -1,0 +1,4 @@
+sh escapeHTML.sh top_bar.html 
+sh escapeHTML.sh side_bar_top.html 
+sh escapeHTML.sh side_bar_bottom.html 
+sh escapeHTML.sh footer.html 
