@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Spawn on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Spawn on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_SpawnOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component can be attached to any object to cause it to spawn a game object upon receiving an event.
             </p>
 
             <p>
@@ -63,7 +63,7 @@
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5 </a></b>
             </p>
 
             <!--Component Table-->
@@ -84,6 +84,45 @@
                     <thead class="component-breakpoint">
                         <th colspan="4">Component Properties</th>
                     </thead>
+                    <tr>
+                        <th scope="row">Prefab</th>
+                        <td>Object</td>
+                        <td>What prefab to instantiate upon receiving the event.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Spawns Per Event</th>
+                        <td>Integer</td>
+                        <td>How many instances of the prefab to spawn every time an event is received.</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Max Spawns</th>
+                        <td>Integer</td>
+                        <td>Total maximum number of instances this component is allowed to spawn. (0 means no limit).</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooldown</th>
+                        <td>Float</td>
+                        <td>Amount of time to wait (in seconds) until an event can trigger another spawn.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Spawn Position Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Spawn Position</th>
+                        <td>type</td>
+                        <td>description</td>
+                        <td>defaultvalue</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">name</th>
+                        <td>type</td>
+                        <td>description</td>
+                        <td>defaultvalue</td>
+                    </tr>
                     <tr>
                         <th scope="row">name</th>
                         <td>type</td>
@@ -112,9 +151,9 @@
 
 
             </table>
-            
 
-        <!--Class Description Body-->
+
+            <!--Class Description Body-->
     </div>
 
     <!--Side Bar-->

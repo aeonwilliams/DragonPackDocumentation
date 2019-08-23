@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Play Sound on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Play Sound on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_PlaySoundOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component can be added to any object to play a sound upon receiving an event notice.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Play a sound using a chosen audio emitter.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,36 +85,72 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Target Audio Sources</th>
+                        <td>Array of Objects</td>
+                        <td>Object(s) whose emitter will be used to play sound.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Volume Variance Min</th>
+                        <td>Float</td>
+                        <td>Minimum volume for the sound to be played at. The sound volume is played at a random range between this and the Volume Variance Max.</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Volume Variance Max</th>
+                        <td>Float</td>
+                        <td>Maximum volume for the sound to be played at. The sound volume is played at a random range between this and the Volume Variance Min.</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Pitch Variance Min</th>
+                        <td>Float</td>
+                        <td>Minimum pitch for the sound to be played at. The sound pitch is played at a random range between this and the Pitch Variance Max.</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pitch Variance Max</th>
+                        <td>Float</td>
+                        <td>Maximum pitch for the sound to be played at. The sound pitch is played at a random range between this and the Pitch Variance Min.</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooldown</th>
+                        <td>Float</td>
+                        <td>Number of seconds to wait until an event can trigger another instance of sound played.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
 
             </table>
-            
 
-        <!--Class Description Body-->
+
+            <!--Class Description Body-->
     </div>
 
     <!--Side Bar-->

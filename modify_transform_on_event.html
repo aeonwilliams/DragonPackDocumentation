@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Modify Transform on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Modify Transform on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_ModifyTransformOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component can be added to any object to cause it to modify an object's Transform properties upon receiving an event.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Modify an object or set of object's size and position in the scene.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5</a></b>
             </p>
 
             <!--Component Table-->
@@ -79,42 +79,101 @@
                         <th scope="col">Default Value</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <thead class="component-breakpoint">
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Target Modify Objects</th>
+                        <td>Array of Objects</td>
+                        <td>Tagged object(s) whose transform properties will be modified. Set to owner by default if this is empty.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Transform Mode</th>
+                        <td>LPK Transform Mode</td>
+                        <td>How the change in the transform component will be applied.</td>
+                        <td>WORLD</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Modifications</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">SET</th>
+                        <td>LPK Numeric Modify Mode</td>
+                        <td>What values to assign to the chosen property.</td>
+                        <td>N/A</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">ADD</th>
+                        <td>LPK Numeric Modify Mode</td>
+                        <td>What values to add to the chosen property values.</td>
+                        <td>N/A</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">SUBTRACT</th>
+                        <td>LPK Numeric Modify Mode</td>
+                        <td>What values to subtract from the chosen property values.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MULTIPLY</th>
+                        <td>LPK Numeric Modify Mode</td>
+                        <td>What values to multiply the chosen property values by.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">DIVIDE</th>
+                        <td>LPK Numeric Modify Mode</td>
+                        <td>What values to divide the chosen property values by.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <thead class="component-breakpoint-lighter">
+                        <th colspan="4">COPY</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Copy Target</th>
+                        <td>Object</td>
+                        <td>Object whose visible flag will be copied to the recipient's property value. Only used if mode is set to copy. Default to self if this and the tag field are left unset.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Copy Tag</th>
+                        <td>Tag</td>
+                        <td>Object whose property value will be copied to the recipient's property value. Only used if mode is set to copy. Note this will only affect the first object with the tag found.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
 
             </table>
-            
 
-        <!--Class Description Body-->
+
+            <!--Class Description Body-->
     </div>
 
     <!--Side Bar-->
