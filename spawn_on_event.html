@@ -59,7 +59,7 @@
 
             <!--In Depth Description-->
             <p>
-
+                Spawn any object or prefab when an event is receieved. If you spawn instances of an object that is not a <a href="https://docs.unity3d.com/Manual/Prefabs.html" target="_blank">prefab</a>, it spawns <i>clones</i>, and it will not work the same way with collision and other triggers.
             </p>
 
             <p>
@@ -124,28 +124,76 @@
                         <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Rotation Spawn Mode</th>
+                        <td>LPK Non Numeric Modify Mode</td>
+                        <td>Mode for how to select the rotation to spawn a game object with.</td>
+                        <td>SET</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Spawn Rotation</th>
+                        <td>Vector3</td>
+                        <td>Transform whose angles will be used for the spawned game object.</td>
+                        <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Translation Offset Variance</th>
+                        <td>Vector3</td>
+                        <td>Random translational variance applied to the spawn position. A value of (2, 0, 0) will apply a random offset of -2 to 2 to the X value of the spawn position</td>
+                        <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Rotational Offset Variance</th>
+                        <td>Vector3</td>
+                        <td>Random angular variance applied to the spawned object's angles.</td>
+                        <td>0,0,0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Game Object Spawned Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

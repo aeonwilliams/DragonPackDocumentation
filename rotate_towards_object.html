@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Rotate Towards Object</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+                Rotate Towards Object
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_RotateTowardsGameObjectOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component can be added to any object to cause it to rotate itself to face the position of a specified object once, upon receiving an event.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Send an event to make the owner rotate towards the given object. Use <a href="dispatch_on_update.html" target="_blank">Dispatch on Update</a> to make the owner consistently follow the chosen target, until the script is disabled.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +85,46 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Initial Transform Object</th>
+                        <td>Object</td>
+                        <td>Initial object to rotate towards.  If deleted or set to null, this script will try to find a tagged object to face.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Target Facing Tag</th>
+                        <td>String</td>
+                        <td>Tag to search for to find an object to face.</td>
+                        <td>Untagged</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Rotation Speed</th>
+                        <td>Float</td>
+                        <td>Speed per second to rotate towards target.</td>
+                        <td>360</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

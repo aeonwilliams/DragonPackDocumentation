@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Translation Bounds</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Translation Bounds
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_TranslationBounds.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component keeps its owner within the specified bounds on Translation. 
             </p>
 
             <p>
@@ -59,11 +59,14 @@
 
             <!--In Depth Description-->
             <p>
-
+                Keep the owner within the chosen constraints. The constraints roughly line up with the Size property of the <a href="https://docs.unity3d.com/ScriptReference/Camera.html" target="_blank">Camera</a>.
+                <p>
+                        <font size="3px"><i>Note:  The compatibility with other components depends on the initalization order. Be conscious when using this with components such as <a href="followobject.html" target="_blank">Follow Object</a>.</i></font>
+                </p>               
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,29 +88,38 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Min Bounds</th>
+                        <td>Vector3</td>
+                        <td>The minimum value that the object's translation can reach.</td>
+                        <td>-10,-10,-10</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Max Bounds</th>
+                        <td>Vector3</td>
+                        <td>The maximum value that the object's translation can reach.</td>
+                        <td>10,10,10</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Local</th>
+                        <td>Boolean</td>
+                        <td>Whether this component should constrain local position or world position.</td>
+                        <td>False</td>
                     </tr>
-                    <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
-                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                        </thead>
+                        <tr>
+                            <th scope="row">Print Debug Info</th>
+                            <td>Boolean</td>
+                            <td>Toggle console debug messages.</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Label</th>
+                            <td>String</td>
+                            <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                            <td>None</td>
+                        </tr>
                 </tbody>
 
 
