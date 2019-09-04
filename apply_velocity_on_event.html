@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DragonPack - Apply Velocity on Event</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <!--Class Description Body-->
+    <div>
+
+        <!--Class Name-->
+        <classheader>
+            Apply Velocity on Event
+        </classheader>
+
+        <!--LPK File Name-->
+        <filename>
+            LPK_ApplyVelocityOnEvent2D.cs
+        </filename>
+
+        <classdescription>
+            <!--Basic Description-->
+            <p>
+                This component can be used to apply velocity to Rigidbody2D components when an event is received.
+            </p>
+
+            <p>
+                <b>Suggested use:</b>
+            </p>
+
+            <!--In Depth Description-->
+            <p>
+                Apply velocity in a specified direction, or towards a target when an event is received.
+                <br><br> Download Project 5 to see how it's implemented for projectiles, by using a dummy child object as the target, and a <a href="dispatch_on_start.html" target="_blank">Dispatch on Start</a> to Owner.
+            </p>
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 5</a></b>
+            </p>
+
+            <!--Component Table-->
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Components</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Component Properties</th>
+                    </thead>
+                    <thead class="thead-dark component-breakpoint">
+                        <th colspan="4"> </th>
+                    </thead>
+                    <tr class="tr1">
+                        <th scope="row">Velocity Application Mode</th>
+                        <td>Enum</td>
+                        <td>How to determine how velocity is applied to a game object when an event is received. TARGET = Home in on a game object. DIRECTION = Set velocity in a specific direction.</td>
+                        <td>DIRECTION</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Velocity Application Mode - DIRECTION</th>
+                    </thead>
+                    <tr class="tr2">
+                        <th scope="row">Direction</th>
+                        <td>Vector3</td>
+                        <td>Direction to set the velocity of the RigidBody2D towards. This value will be normalized.</td>
+                        <td>0,0,0</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Velocity Application Mode - TARGET</th>
+                    </thead>
+                    <tr class="tr2">
+                        <th scope="row">Target Game Object</th>
+                        <td>Game Object</td>
+                        <td>Game object to move towards. If set to null, try to find the first object with the specified tag.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr class="tr2">
+                        <th scope="row">Target Tags</th>
+                        <td>String</td>
+                        <td>Tag to find a game object with to apply velocity towards.</td>
+                        <td> </td>
+                    </tr>
+                    <tr class="tr2">
+                        <th scope="row">Detect Radius</th>
+                        <td>Float</td>
+                        <td>Max distance used to search for game objects. If set to 0, detect objects anywhere.</td>
+                        <td>10</td>
+                    </tr>
+                    <thead class="thead-dark  component-breakpoint-light">
+                        <th colspan="4"> </th>
+                    </thead>
+                    <tr class="tr1">
+                        <th scope="row">Modify Rigid Body 2D</th>
+                        <td>RigidBody</td>
+                        <td>RigidBody2D component to change the velocity on.</td>
+                        <td>Owner RigidBody</td>
+                    </tr>
+                    <tr class="tr1">
+                        <th scope="row">Speed</th>
+                        <td>Float</td>
+                        <td>Speed of the force to be applied.</td>
+                        <td>5</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr class="tr1">
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr class="tr1">
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr class="tr1">
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+
+
+            <!--Class Description Body-->
+    </div>
+
+    <!--Side Bar-->
+    <script src="side_bar_bottom.js"></script>
+    <script src="footer.js"></script>
+
+</body>

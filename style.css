@@ -186,6 +186,7 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
+    font-size: x-large
 }
 
 .component-breakpoint-light {
@@ -194,6 +195,7 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
+    font-size: large;
 }
 
 .component-breakpoint-lighter {
@@ -202,6 +204,15 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
+    font-size: medium;
+}
+
+.tr1 {
+    font-size: large;
+}
+
+.tr2 {
+    font-size: medium;
 }
 
 .dragonpack-class {
@@ -244,7 +255,8 @@ classdescription {
     width: 100%;
     background-color: #343a40;
     color: rgba(255, 255, 255, 0.5);
-        text-align: center;
+    text-align: center;
 }
+
 
 /* #495057;*/
