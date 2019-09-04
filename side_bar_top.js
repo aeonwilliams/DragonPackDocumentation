@@ -53,8 +53,9 @@ document.write(`\
                     <li><a href="exit_game_on_event.html">Exit Game On Event</a></li>\
                     <li><a href="face_velocity.html">Face Velocity</a></li>\
                     <li><a href="fade_sound_on_event.html">Fade Sound On Event</a></li>\
-                    <li><a href="followobject.html">FollowObject</a></li>\
-                    <li><a href="gradient_color_animatior.html">Gradient Color Animatior</a></li>\
+                    <li><a href="follow_mouse.html">Follow Mouse</a></li>\
+                    <li><a href="followobject.html">Follow Object</a></li>\
+                    <li><a href="gradient_color_animator.html">Gradient Color Animator</a></li>\
                     <li><a href="load_scene_on_event.html">Load Scene On Event</a></li>\
                     <li><a href="magnetic_field.html">Magnetic Field</a></li>\
                     <li><a href="modify_counter_on_event.html">Modify Counter</a></li>\

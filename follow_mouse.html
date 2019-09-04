@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Radial Display</title>
+    <title> DragonPack - Follow Mouse</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Radial Display
+            Follow Mouse
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            LPK_RadialDisplay.cs
+            LPK_FollowMouse.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                A component for a radial style counter display.
+                This component can be added to any object to cause it to follow the mouse position.
             </p>
 
             <p>
@@ -59,13 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-                Display health, cooldown, or goal progress using a circular radial display. 
-                <br><br>
-                Proportionate pieces will be added and removed from the display as the connected counter decreases.  The sprite used as the display object doesn't have to be a circle, but it will look the most aesthetically pleasing as one.
+                This can be used to control a player object, or create a custom mouse cursor. Increased Interpolation Factor mitigates the delay between mouse and object movement.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 6</a></b>
             </p>
 
             <!--Component Table-->
@@ -87,36 +85,45 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Z Depth</th>
+                        <td>Float</td>
+                        <td>At what Z depth should the object be relocated to.</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Offset</th>
+                        <td>Vector3</td>
+                        <td>Offset to apply to mouse position when setting translation.</td>
+                        <td>0,0,0</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Interpolation Factor</th>
+                        <td>Float</td>
+                        <td>What percentage of the distance between my current position and the target's should the object move every frame.</td>
+                        <td>0.1</td>
                     </tr>
-                    <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr class="tr1">
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr class="tr1">
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 
 
             </table>
-            
 
-        <!--Class Description Body-->
+
+            <!--Class Description Body-->
     </div>
 
     <!--Side Bar-->
