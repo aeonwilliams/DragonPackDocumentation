@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Gradient Color Animator</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Gradient Color Animator
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+                LPK_GradientColorAnimator.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                Animate color of a sprite based on a chosen gradient.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Change the color of a sprite using a gradient. Can be used to transition smoothly between colors, or flash a certain color temporarily.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 6</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +85,112 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Gradient</th>
+                        <td>Gradient</td>
+                        <td>The gradient colors that will be displayed.</td>
+                        <td>255,255,255</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                            <th colspan="4">Renderer Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Modify Sprite Renderer</th>
+                        <td>SpriteRenderer</td>
+                        <td>SpriteRenderer to modify the color of.  If left null, and this object has a SpriteRenderer component, assume owner.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Modify Text Mesh</th>
+                        <td>TextMesh</td>
+                        <td>TextMesh to modify the color of.  If left null, and this object has a TextMesh component, assume owner.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Modify Image</th>
+                        <td>Image</td>
+                        <td>UI Image to modify the color of.  If left null, and this object has an Image component, assume owner.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Modify Sprite Renderer</th>
+                        <td>SpriteRenderer</td>
+                        <td>"UI text to modify the color of.  If left null, and this object has a text component, assume owner.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                            <th colspan="4"></th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Mode</th>
+                        <td>LPK_GradientAnimationPlayMode</td>
+                        <td>What animation mode to use.</td>
+                        <td>PLAY_ONCE</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Never Restart</th>
+                        <td>Boolean</td>
+                        <td>If set, even if another event is received, the gradient will continue on as if nothing happened.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Duration</th>
+                        <td>Float</td>
+                        <td>How long is one animation cycle (in seconds).</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Delay</th>
+                        <td>Float</td>
+                        <td>How long to wait until the animation begins.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Gradient Color Animator Finished Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

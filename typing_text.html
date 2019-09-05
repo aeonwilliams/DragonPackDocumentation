@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Typing Text</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            LPK_TypingText
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_TypingText.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                This component creates a typing text effect for an animated display.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                <a href="https://docs.unity3d.com/Manual/script-Text.html" target="_blank">Text</a> or <a href="https://docs.unity3d.com/Manual/class-TextMesh.html" target="_blank">Text Mesh</a> components are used as vessels for this component to type out chosen text one character at a time at the given speed. It can be used as a UI element, or on a normal object. Any text properties, besides the letters, are configured in the Text or Text Mesh components.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 6</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +85,80 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Text</th>
+                        <td>String</td>
+                        <td>Text to type out.</td>
+                        <td> </td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Type Mode</th>
+                        <td>LPK_TypeType</td>
+                        <td>What type of animation to play for typing text out.</td>
+                        <td>TYPE</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Type Speed</th>
+                        <td>Float</td>
+                        <td>How fast each concurrent character is typed.</td>
+                        <td>0.15</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Comma Pause Time</th>
+                        <td>Float</td>
+                        <td>How long to pause for commas.</td>
+                        <td>0.15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Punctuation Pause Time</th>
+                        <td>Float</td>
+                        <td>How long to pause for periods, question marks, colons, and exclamation points.</td>
+                        <td>0.15</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Typing Text Update/Completed Event Sending Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when Update/Completed (respectively) conditions are met:
+                            <div>
+                                <ul>
+                                    <li>Update when the upcoming letter has been typed.</li>
+                                    <li>Completed when the last character in the text has been printed out.</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

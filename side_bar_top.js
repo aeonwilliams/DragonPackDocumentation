@@ -39,13 +39,13 @@ document.write(`\
                     <li><a href="detach_on_event.html">Detach On Event</a></li>\
                     <li><a href="dispatch_on_animator_cycle.html">Dispatch On Animator Cycle</a></li>\
                     <li><a href="dispatch_on_button_input.html">Dispatch On Button Input</a></li>\
-                    <li><a href="dispatch_on_collision.html">Dispatch On Gamepad Input</a></li>\
-                    <li><a href="dispatch_on_gamepad_input.html">Dispatch On Keyboard Input</a></li>\
-                    <li><a href="dispatch_on_keyboard_input.html">Dispatch On Line Of Sight</a></li>\
-                    <li><a href="dispatch_on_line_of_sight.html">Dispatch On Mouse Input</a></li>\
-                    <li><a href="dispatch_on_mouse_input.html">Dispatch On Start</a></li>\
-                    <li><a href="dispatch_on_start.html">Dispatch On Visibility</a></li>\
-                    <li><a href="dispatch_on_visibility.html">Dispatch on Collision</a></li>\
+                    <li><a href="dispatch_on_gamepad_input.html">Dispatch On Gamepad Input</a></li>\
+                    <li><a href="dispatch_on_keyboard_input.html">Dispatch On Keyboard Input</a></li>\
+                    <li><a href="dispatch_on_line_of_sight.html">Dispatch On Line Of Sight</a></li>\
+                    <li><a href="dispatch_on_mouse_input.html">Dispatch On Mouse Input</a></li>\
+                    <li><a href="dispatch_on_start.html">Dispatch On Start</a></li>\
+                    <li><a href="dispatch_on_visibility.html">Dispatch On Visibility</a></li>\
+                    <li><a href="dispatch_on_collision.html">Dispatch on Collision</a></li>\
                     <li><a href="display_object_base.html">Display Object Base</a></li>\
                     <li><a href="dynamic_platformer_controller.html">Dynamic Platformer Controller</a></li>\
                     <li><a href="dynamic_topdown_orthogonal_controller.html">Dynamic TopDown Orthogonal Controller</a></li>\

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Shake on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,18 +39,18 @@
 
         <!--Class Name-->
         <classheader>
-            Template
+            Shake on Event
         </classheader>
 
         <!--LPK File Name-->
         <filename>
-            template.cs
+            LPK_ShakeOnEvent.cs
         </filename>
 
         <classdescription>
             <!--Basic Description-->
             <p>
-                Templating
+                Alters an object's translation and rotation to create a shaking effect when an event is received.
             </p>
 
             <p>
@@ -59,11 +59,11 @@
 
             <!--In Depth Description-->
             <p>
-
+                Shake the player to indicate anything between pickups-damage, and shake objects to alert the player to their importance. All of the component properties can be altered to create a miniscule wiggle, or a violent shake, for some interesting, experience-enhancing effects.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 6</a></b>
             </p>
 
             <!--Component Table-->
@@ -85,28 +85,76 @@
                         <th colspan="4">Component Properties</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Target Shake Game Object</th>
+                        <td>Transform</td>
+                        <td>Transform component of the game object to shake when the specified event is received.</td>
+                        <td>None</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Reset Translation</th>
+                        <td>Boolean</td>
+                        <td>Flag to check if the game object shaking will have its translation reset after the effect.</td>
+                        <td>True</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Reset Rotation</th>
+                        <td>Boolean</td>
+                        <td>Flag to check if the game object shaking will have its rotation reset after the effect.</td>
+                        <td>True</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
+                        <th scope="row">Intensity</th>
+                        <td>Float</td>
+                        <td>How much intensity should be added per shake.</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Intensity Exponent</th>
+                        <td>Float</td>
+                        <td>Set a curve for the shake.  High values are larger curves.</td>
+                        <td>2.0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Translational Magnitude</th>
+                        <td>Vector3</td>
+                        <td>The maximum distance that the object should displace itself at maximum intensity.</td>
+                        <td>1,1,0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rotational Magnitude</th>
                         <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <td>The maximum Euler angles (in degrees) that the object should rotate itself at maximum intensity.</td>
+                        <td>0,0,15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Decay Rate</th>
+                        <td>Float</td>
+                        <td>The rate(in intensity amount per second) at which the current shake intensity should decay.</td>
+                        <td>2</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
                     </tr>
                 </tbody>
 

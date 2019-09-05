@@ -186,8 +186,8 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
-    font-size: x-large
-}
+/*     font-size: x-large
+ */}
 
 .component-breakpoint-light {
     color: #495057;
@@ -195,8 +195,8 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
-    font-size: large;
-}
+/*     font-size: large;
+ */}
 
 .component-breakpoint-lighter {
     color: #495057;
@@ -204,8 +204,8 @@ classdescription {
     border-color: #dee2e6;
     border: 1px solid #000;
     text-align: center;
-    font-size: medium;
-}
+/*     font-size: medium;
+ */}
 
 .tr1 {
     font-size: large;
