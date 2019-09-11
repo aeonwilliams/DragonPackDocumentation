@@ -60,6 +60,7 @@ document.write(`\
                     <li><a href="magnetic_field.html">Magnetic Field</a></li>\
                     <li><a href="modify_counter_on_event.html">Modify Counter</a></li>\
                     <li><a href="modify_game_object_active_state.html">Modify Game Object Active State</a></li>\
+                    <li><a href="modify_mouse_visibility_on_event.html">Modify Mouse Visibility on Event</a></li>\
                     <li><a href="modify_pauses_state.html">Modify Pauses State</a></li>\
                     <li><a href="modify_rigidbody_2d_on_event.html">Modify Rigidbody 2D On Event</a></li>\
                     <li><a href="modify_script_active_state.html">Modify Script Active State</a></li>\

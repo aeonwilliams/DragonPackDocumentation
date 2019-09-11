@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DragonPack - Modify Mouse Visibility on Event</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147627104-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147627104-1');
+    </script>
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <!--Class Description Body-->
+    <div>
+
+        <!--Class Name-->
+        <classheader>
+                Modify Mouse Visibility on Event
+        </classheader>
+
+        <!--LPK File Name-->
+        <filename>
+            LPK_ModifyMouseVisibilityOnEvent.cs
+        </filename>
+
+        <classdescription>
+            <!--Basic Description-->
+            <p>
+                Show or hide the cursor on event.
+            </p>
+
+            <p>
+                <b>Suggested use:</b>
+            </p>
+
+            <!--In Depth Description-->
+            <p>
+                Toggles the <a href="https://docs.unity3d.com/ScriptReference/Cursor-visible.html" target="_blank">Cursor.visible</a> property to show or hide the mouse upon receiving an event. 
+            </p>
+
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 6</a></b>
+            </p>
+
+            <!--Component Table-->
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Components</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Component Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Mouse Visibility Mode</th>
+                        <td>Enum</td>
+                        <td>Sets how this component will effect mouse visibility.</td>
+                        <td>SHOW</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Event Receiving Info</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Event Trigger</th>
+                        <td>LPK Event Object</td>
+                        <td>Which event will trigger this component's action.</td>
+                        <td>None</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
+
+
+       
