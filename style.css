@@ -207,6 +207,11 @@ classdescription {
 /*     font-size: medium;
  */}
 
+.inner-table {
+    border-color: #e9ecef;
+    border: 0px solid #e9ecef;
+}
+
 .tr1 {
     font-size: large;
 }
