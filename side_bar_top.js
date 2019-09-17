@@ -15,6 +15,9 @@ document.write(`\
                         <a href="install_tutorial.html">How to Install DragonPack</a>\
                     </li>\
                     <li>\
+                        <a href="introduction_to_the_unity_editor.html">Introduction to the Unity Editor</a>\
+                    </li>\
+                    <li>\
                         <a href="event_system_tutorial.html">Event System Tutorial</a>\
                     </li>\
 \

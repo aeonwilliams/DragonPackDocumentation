@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DragonPack - Introduction to the Unity Editor</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147212940-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147212940-1');
+    </script>
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <div>
+
+        <classheader>
+            Introduction to the Unity Editor
+        </classheader>
+        <hr>
+
+        <classdescription>
+            <p>
+                Before we begin, you may have installed Unity Hub instead of a single installation of Unity. For our purposes, there is not difference in the way we will create a new project. Unity Hub has some great additional features that will be discussed later.
+
+                <br><br>
+                <b style="color: #2196f3">For now, click on the Unity icon to get started.</b>
+            </p>
+            <div>
+                <hr>
+                <h2>
+                    The Unity Hub
+                </h2>
+                <img src="assets/IntroductionToTheUnityEditor/1.png">
+                <p>
+                    Unity will go through its startup sequence and you will see a screen similar to the one above. You will need to change three of the fields:
+                    <ul>
+                        <li>
+                            1) Project Name – Change this to “The Cage” (no quotes)
+                        </li>
+                        <li>
+                            2) Template – Change this to 2D
+                        </li>
+                        <li>
+                            3) Location – Change this to a folder on your local drive.*
+                        </li>
+                    </ul>
+                    <p style="font-size: small">
+                        * You can use a network drive to store your projects, but it will take longer for Visual Studio to update the scripts in Unity. If you do use a local drive, be sure to back up your work daily as some systems clear out local drives each night.
+                    </p>
+                    
+                    Do not change the Organization Field.
+
+                    <br><br>
+                    <b style="color: #2196f3">Click the button labeled Create Project.</b>
+                </p>
+            </div>
+            <div>
+                <hr>
+                <h2>
+                    The Unity Workspace
+                </h2>
+                <img src="assets/IntroductionToTheUnityEditor/2.png" style="height: 70%" width="70%">
+                <p>
+                    After clicking on Create Project, the Unity workspace will appear. Unity has a very flexible interface, so what you see may not look exactly like the image above, but we will fix that next by setting our workspace layout to Default.
+                    <br><br>
+                    <b style="color:#2196f3">Click on the button in the top-right titles Layout, and choose Default from the drop-down menu.</b>
+                    <br>
+                    <img src="assets/IntroductionToTheUnityEditor/3.png">
+                    <br><br>
+                    Now that we have the default layout, let’s examine the Unity interface.
+                    <br><br>
+                    <img src="assets/IntroductionToTheUnityEditor/4.png" style="height: 70%" width="70%">
+                    <br><br>
+                    The Unity interface is divided into 5 main sections or panels:
+                    <br>
+                    <ul>
+                        <li>
+                            <b>Toolbar</b>
+                            <p>
+                                The toolbar contains the various manipulator tools that we will use to move objects and pan around the Scene View. From left to right, they are the Pan, Move, Rotate, Scale, and Multi-Tool.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Hierarchy</b>
+                            <p>
+                                The hierarchy panel shows all of the object currently in our scene. You can see that Unity has created a default scene called Sample Scene.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Project</b>
+                            <p>
+                                The Project panel shows all of the assets available in our project. The Assets folder mirrors how the files are stored with our project. If you create a folder within Assets called Sprites, a new folder will be created in the project files stored with the current project.
+                                    
+                            </p>
+                        </li>
+                        <li>
+                            <b>Scene View</b>
+                            <p>
+                                The scene view is where we will place and move the objects so they appear where we want them to when the game starts.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Inspector</b>
+                            <p>
+                                The inspector panel contains all of the editable attributes of the currently selected object in the Hierarchy or Scene View panels.
+                            </p>
+                        </li>
+                    </ul>
+
+                    There are other windows and tabs, but these will be discussed as they are needed.
+                    
+            </p>
+        </div>
+        <div>
+            <hr>
+            <h2>Building Our First Scene</h2>
+            <p>
+                The first thing we will do is change the name of Sample Scene to something more meaningful for our game. There are several places we can access the current scene, but we will work in the Hierarchy panel for now.
+                <br>
+                <b style="color:#2196f3">Right-Click on Sample Scene, and choose Rename. Change the scene name to The Cage</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/5.png">
+                <br><br>
+                You will notice an asterisk next to the scene name. This is telling us that we have unsaved changes in our scene. 
+                <br>
+                <b style="color:#2196f3">Go to the file menu at the top and choose File -> Save Scene, or press CTRL-S (CMD-S on Mac) to save the scene.</b>
+                <br>
+                We are going to create our first game asset, but first we will start developing the habit of organizing our game assets.
+                <hr>
+                <p style="color: #085391">
+                    Pro Tip: Organization is essential even in small game projects. It is vital that you develop good habits right away by organizing files in your project panel.
+                </p>
+                <hr>
+                <b style="color:#2196f3">In the Project panel Double-Click on the Assets folder to open it.</b>
+                <br><br>
+                <img src="assets/IntroductionToTheUnityEditor/6.png">
+                <b style="color:#2196f3">Right-Click and choose Create->Folder</b>
+                <br>
+                You will see a new folder appear prompting you for a name. 
+                <br><br>
+                <b style="color:#2196f3">
+                    Type in Sprites and press ENTER.
+                    <br>
+                    Now Double-Click on the Sprites folder to open it.       <img src="assets/IntroductionToTheUnityEditor/7.png">
+                    <br>
+                    Right-Click anywhere in the Sprites folder and choose Create->Sprites->Circle.
+                    <br>
+                    <img src="assets/IntroductionToTheUnityEditor/8.png">
+                </b>
+                <br><br>
+                A new Sprite will appear in the Sprites folder, prompting you for a name.
+                <br>
+                <b style="color:#2196f3">Type in Ball_1 and press ENTER.</b>
+                <br><br>
+                We have successfully created a new sprite, and added it to our project, but it is not yet in our scene. 
+                <br><br>
+                To add it to the scene, <b style="color: #2196f3">drag the sprite from the Project panel into the Scene View.</b> A white circle shaped sprite will now appear in the scene view and the Hierarchy panel. 
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/9.png">
+                <br><br>
+                To see our progress so far, let’s play the game (such as it is). At the top of the Scene View are the Play/Pause/Step buttons. 
+                <br><br>
+                <b style="color: #2196f3">Press the Play button.</b> Unity will switch from Scene View to Game View.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/10.png">
+                <br><br>
+                The default background color in Unity is a dark blue, so your background may be a different color than show above. Don’t worry about for now. This is primarily personal preference.
+                <br><br>
+                <b style="color: #2196f3">Click the Play Button again to stop the game.</b>
+                <br><br>
+                One thing that we do need to consider right now is the aspect ratio of our game. By default, Unity sets the aspect ratio to 16:9, or widescreen format. This makes sense as most monitors and mobile devices use this aspect ratio. However, we are making something that looks more like a classic arcade game which would have displayed on a 4:3 ratio monitor. In the spirit of classic games, let’s change our aspect ratio to 4:3.
+                <br><br>
+                <b style="color: #2196f3">Click on the Game tab at the top of the Scene View.</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/11.png">
+                <br>
+                You will see a dropdown menu that currently states Free Aspect.
+                <br>
+                <b style="color: #2196f3">Choose 4:3 on the dropdown menu.</b>
+            </p>
+        </div>
+
+        <div>
+            <hr>
+            <h2>The Inspector Panel</h2>
+            <p>
+                Now that we have our aspectratio fixed and a sprite added to the scene, it’s time to take a closer look at the Inspector panel. As stated above, the Inspector panel contains all of the editable attributes of any selected game object. Let’s start by taking a look at our Ball_1 sprite.
+                <br><br>
+                <b style="color: #2196f3">Click on Ball_1 in the Hierarchy or Scene View panels.</b> The Inspector panel will change to show all of hte editable attributes of Ball_1.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/12.png">
+                <hr>
+                <p style="color: #085391">
+                        Everything we add to our unity project is a game object. At its most basic, a game object has position, rotation, and scale. We can add components to game objects that allow them to fulfill specific roles. The most common is the sprite component that allows the object to be seen during the game. In the next section, we will add a physics component.
+                </p>
+                <hr>
+                We’re going to start by changing the color of our ball to something more interesting than white.
+                <br>
+                <b style="color: #2196f3">Click on the color box next to the Color attribute.</b>
+                The color chooser will appear.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/13.png">
+                <br><br>
+                <b style="color: #2196f3">Choose a color you like. We will use a bright red. <br>Click on the X at the top-right of the color chooser to close it.</b>
+                <br><br>
+                We now have a game window with a ball sprite in it, but it’s not doing much yet. Next step – adding physics.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/14.png">
+            </p>
+        </div>
+        <div>
+            <hr>
+            <h2>Adding Components to a Game Object</h2>
+            <p>
+                <b style="color: #2196f3">Click on the Ball object in the Hierarchy or the Scene View.</b>
+                <br><br>
+                In the Inspector panel, you will see the attributes of the sprite. At the bottom of the panel, you will see a button labeled Add Component. 
+                <br><br>
+                <b style="color: #2196f3">Click on Add Component and a panel will appear.</b>
+                <br>
+                In the text box at the top, <b style="color: #2196f3">type in Rigid.</b> As you type, you will see options appearing in the Search list below. We want the component called RigidBody 2D.
+                <br>
+                <b><i>Do NOT choose RigidBody. RigidBody is a 3D component and will not interact with RigidBody 2D components.</i></b>
+                <br>
+                <b style="color: #2196f3">Click on RigidBody 2D.</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/15.png">
+                <br>
+                <br>
+                You will see more information added to the Inspector panel.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/16.png">
+                <br><br>
+                <b style="color: #2196f3">Click on the Play Button above the Scene View</b> and see what happens.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/17.png">
+                <br><br>
+                Notice that the ball falls straight down and off the screen.
+                <br><br>
+                Two things are happening here. The ball is now under the influence of gravity and there’s nothing to stop it from falling through the bottom of the screen. 
+                <br><br>
+                We’ll deal with gravity later. For now, let’s add another object for the ball to interact with.
+                <br><br>
+                <b style="color: #2196f3">
+                    Open the Sprites folder in the Project panel.
+                    <br>
+                    Right-Click and choose Create->Sprite->Square.
+                    <br>
+                    <img src="assets/IntroductionToTheUnityEditor/18.png">
+                    <br>
+                    Name the square sprite Wall.
+                </b>
+                <br><br>
+                Now we're going to set the position and scale through the Inspector panel. Make sure Wall is selected and  <b style="color: #2196f3">enter the following values in the position and scale fields in the object's transform:</b>
+                <ul>
+                    <li>Position X: 0</li>
+                    <li>Position Y: -5</li>
+                    <li>Scale X: 14</li>
+                    <li>Scale Y: 0.25</li>
+                </ul>
+                <img src="assets/IntroductionToTheUnityEditor/19.png">
+                <br><br>
+                Wall is now more of a floor.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/20.png">
+                <br><br>
+                Change the color of Wall to something that will contrast with the ball. For this example, we will use dark green.
+                <br><br>
+                <b style="color: #2196f3">Press the Play button again.</b> Notice that the ball falls right through the wall.
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/21.png">
+                <br><br>
+                The Ball and Wall cannot interact yet because we have not told the engine that they should collide with one another. We will do this by adding a Box Collider 2D to Wall and a Circle Collider 2D to Ball. As with the RigidBodies, there are two types of colliders. <b>Make sure you choose the 2D versions throughout this project and course.</b>
+                <br><br>
+                With Wall still selected, choose Add Component from the Inspector panel. 
+                <br>
+                In the text field, type in collider. As with the RigidBody, a list will appear once you start typing.
+                <br>
+                <b style="color: #2196f3">Choose Box Collider 2D.</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/22.png">
+                <br>
+                If you zoom in to see the Wall very closely, you will notice a bright green line around the perimeter of the sprite. This is the collider.
+                <br><br>
+                <b style="color: #2196f3">Now select Ball from the Hierarchy and click Add Component in the Inspector.</b> You will notice that the collider list appears immediately. This is because that was the last thing we searched for.
+                <br>
+                <b style="color: #2196f3">Choose Circle Collider 2D.</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/22.5.png">
+                <br><br>
+                If you zoom in on the Ball sprite, you will see that it too has a bright green outline indicating that we have added a collider.
+                <br>
+                Both of our objects now have collision.
+                <br><br>
+                <b style="color: #2196f3">Click on the Play button again and see what happens.</b>
+                <br>
+                <img src="assets/IntroductionToTheUnityEditor/23.png">
+                <br>
+                You should see the ball drop, collider with the wall, and stop. If you do not, check that you have added collisions to the correct objects.
+            </p>
+        </div>
+    </div>
+
+    <!--Side Bar-->
+    <script src="side_bar_bottom.js"></script>
+    <script src="footer.js"></script>
+
+</body>
