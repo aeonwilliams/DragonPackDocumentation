@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Object Display</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,102 +44,98 @@
     <!--Side Bar-->
     <script src="side_bar_top.js"></script>
 
-    <!--HACKHACK-->
-    <div style="display: none">
     <!--Class Description Body-->
-        <div>
+    <div>
 
-            <!--Class Name-->
-            <classheader>
-                Template
-            </classheader>
+        <!--Class Name-->
+        <classheader>
+            Object Display
+        </classheader>
 
-            <!--LPK File Name-->
-            <filename>
-                template.cs
-            </filename>
+        <!--LPK File Name-->
+        <filename>
+            LPK_ObjectDisplay.cs
+        </filename>
 
-            <classdescription>
-                <!--Basic Description-->
-                <p>
-                    Templating
-                </p>
+        <classdescription>
+            <!--Basic Description-->
+            <p>
+                This component serves as a display of values that is indicated by spawning and destroying objects.
+            </p>
 
-                <p>
-                    <b>Suggested use:</b>
-                </p>
+            <p>
+                <b>Suggested use:</b>
+            </p>
 
-                <!--In Depth Description-->
-                <p>
+            <!--In Depth Description-->
+            <p>
+                Indicate values of a <a href = "counter.html" target="_blank">Counter</a> with objects instead of numbers! Most conventionally used for a lives or health indicator but can also be used for anything you are counting using the <a href = "counter.html" target="_blank">Counter</a> component.
+                <br><br>
+                For best practice, create a <a href = "https://docs.unity3d.com/Manual/Prefabs.html" target="_blank">Prefab</a> with the <a href = "https://docs.unity3d.com/Manual/Sprites.html" target="_blank">Sprite</a> that you want to use for the display object. Attach it as the display object for a <a href = "counter.html" target="_blank">Counter</a>, and place it on the screen in a UI <a href = "https://docs.unity3d.com/Manual/UICanvas.html" target="_blank">Canvas</a>.
+            </p>
 
-                </p>
+            <p>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 9</a></b>
+            </p>
 
-                <p>
-                    <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
-                </p>
+            <!--Component Table-->
+            <table class="table table-bordered table-light table-hover">
+                <thead class="thead-dark component-header">
+                    <th colspan="4">Components</th>
+                </thead>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Property</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Default Value</th>
+                    </tr>
+                </thead>
 
-                <!--Component Table-->
-                <table class="table table-bordered table-light table-hover">
-                    <thead class="thead-dark component-header">
-                        <th colspan="4">Components</th>
+                <tbody>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Component Properties</th>
                     </thead>
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Property</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Default Value</th>
-                        </tr>
+                    <tr>
+                        <th scope="row">Display Prefab</th>
+                        <td>GameObject</td>
+                        <td>What object to serve as a display.</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Display Object Offset</th>
+                        <td>Vector3</td>
+                        <td>Where to spawn the next object relative to the previous object.</td>
+                        <td>0,0,0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Max Display Objects</th>
+                        <td>Integer</td>
+                        <td>Maximum amount of objects to show in the display.</td>
+                        <td>5</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                        <th colspan="4">Debug Properties</th>
                     </thead>
-
-                    <tbody>
-                        <thead class="component-breakpoint">
-                            <th colspan="4">Component Properties</th>
-                        </thead>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
+                    </tr>
+                </tbody>
 
 
-                </table>
-                
+            </table>
+            
 
-            <!--Class Description Body-->
-        </div>
-    </div>
-
-    <div style="text-align: center">
-        <h1>
-        UNDER CONSTRUCTION
-        </h1>
-        <br><br>
-        <hr>
-        <h2>
-            Click on the help button in the top right to get in contact with Chris or Aeon with any questions you have!
-        </h2>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--Class Description Body-->
     </div>
 
     <!--Side Bar-->
