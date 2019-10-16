@@ -54,13 +54,9 @@
         <classdescription>
             <p>
                 DragonPack utilizes a custom, dynamic event system for easy game customization with no scripting! This tutorial explains the basics of how to use it, using <a href="dispatch_on_keyboard_input.html" target="_blank">Dispatch on Keyboard Input</a>                and <a href="modify_sprite_on_event.html" target="_blank">Modify Sprite on Event</a>.
-
-                <p>
-                    <font size="3px"><i>This tutorial follows suggested practices for naming conventions and organization - you may name and organize how you see fit, but make sure it's consistent and everything makes sense!</i></font>
-                </p>
-
+                <br><br>
                 This is the project that was used to create this tutorial. Feel free to download it to mess around with, but remember that creating things from scratch is important to really learn things!
-                <br>
+                <br><br>
                 <a class="btn btn-dark btn-md" href="example_projects/EventExample.zip" role="button">Download Example Project</a>
             </p>
             <div>
@@ -236,6 +232,15 @@
 
                 <p>
                     Now you know how to use the basics of DragonPack's event system! Each component is slightly different, but the mechanics of event sending and receiving never change.
+                </p>
+            </div>
+            <div>
+                <h2 style="color: red;">
+                    Important Note:
+                </h2>
+
+                <p>
+                    When communicating with objects in the <a href="https://docs.unity3d.com/Manual/UICanvas.html" target="_blank">Canvas</a>, "Event Sending Mode" <b>NEEDS</b> to be "ALL", otherwise the events will not send and receive properly. 
                 </p>
             </div>
 
