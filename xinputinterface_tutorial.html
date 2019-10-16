@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> DragonPack - XInputInterface</title>
+    <link rel="icon" href="lpk_logo_smol.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147212940-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147212940-1');
+    </script>
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--Custom-->
+    <link rel="stylesheet" href="style.css">
+    <!--Doxygen-->
+    <!--     <link rel="stylesheet" href="customdoxygen.css">
+    <link rel="stylesheet" href="doxygen.css">
+    <link rel="stylesheet" href="navtree.css">
+    <link rel="stylesheet" href="tabs.css"> -->
+
+    <!--Bootstrap-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!--Top Bar-->
+    <script src="top_bar.js"></script>
+    <!--Side Bar-->
+    <script src="side_bar_top.js"></script>
+
+    <div>
+
+        <classheader>
+            How to Implement the XInputInterface DLL
+        </classheader>
+        <hr>
+
+        <classdescription>
+            <p>
+               The XInputInterface.dll enables controller vibration! It is included in the LPK download. 
+               <br><br>
+               <img src="assets/XInputInterfaceTutorial/.5.png">
+               <br><br>
+               
+               Please note that <b>implementing this will make your project windows-exclusive</b>. You do not need to import this .dll if you wish to use the LPK on platforms other than windows.
+            </p>
+            <div>
+                <h2>
+                    Step 1
+                </h2>
+
+                <p>
+                    Navigate to the location your project is saved at. This can be done by right clicking in the Project window within the editor, and selecting "Show in Explorer".
+                    <br><br>
+                    <img src="assets/XInputInterfaceTutorial/1.png" height = "50%" width="50%">
+                </p>
+            </div>
+            <div>
+                <h2>
+                    Step 2
+                </h2>
+
+                <p>
+                    Close the Unity project (if it is open).
+                </p>
+            </div>         
+            <div>
+                <h2>
+                    Step 3
+                </h2>
+
+                <p>
+                    Copy the XInputInterface.dll from the <b>extracted</b> LPK folder you have downloaded, and paste it <b>next to</b> the assets folder of your project.
+                    <br><br>
+                    <img src="assets/XInputInterfaceTutorial/2.png" >
+                </p>
+            </div>         
+
+    </div>
+
+    <!--Side Bar-->
+    <script src="side_bar_bottom.js"></script>
+    <script src="footer.js"></script>
+
+</body>

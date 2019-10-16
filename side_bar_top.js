@@ -20,6 +20,9 @@ document.write(`\
                     <li>\
                         <a href="event_system_tutorial.html">Event System Tutorial</a>\
                     </li>\
+                    <li>\
+                        <a href="xinputinterface_tutorial.html">XInputInterface Integration Tutorial</a>\
+                    </li>\
 \
                 </ul>\
             </div>\
