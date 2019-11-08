@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Vibrate Controller on Event</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,104 +44,106 @@
     <!--Side Bar-->
     <script src="side_bar_top.js"></script>
 
-    <!--HACKHACK-->
-    <div style="display: none">
     <!--Class Description Body-->
-        <div>
+      <div>
 
-            <!--Class Name-->
-            <classheader>
-                Template
-            </classheader>
+          <!--Class Name-->
+          <classheader>
+              Vibrate Controller on Event
+          </classheader>
 
-            <!--LPK File Name-->
-            <filename>
-                template.cs
-            </filename>
+          <!--LPK File Name-->
+          <filename>
+              LPK_VibrateControllerOnEvent.cs
+          </filename>
 
-            <classdescription>
-                <!--Basic Description-->
-                <p>
-                    Templating
-                </p>
+          <classdescription>
+              <!--Basic Description-->
+              <p>
+                  Vibrate a gamepad when events are received. 
+              </p>
 
-                <p>
-                    <b>Suggested use:</b>
-                </p>
+              <p>
+                  <b>Suggested use:</b>
+              </p>
 
-                <!--In Depth Description-->
-                <p>
+              <!--In Depth Description-->
+              <p>
+                Provide the player feedback with appropriate controller vibrations. Good applications include short bursts when the player gets hit, long bursts when an event happens, etc. Use the point vibration feature to adjust the vibration intensity based on proximity. 
+              </p>
 
-                </p>
+              <p>
+                  <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 8</a></b>
+              </p>
 
-                <p>
-                    <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
-                </p>
+              <!--Component Table-->
+              <table class="table table-bordered table-light table-hover">
+                  <thead class="thead-dark component-header">
+                      <th colspan="4">Components</th>
+                  </thead>
+                  <thead class="thead-light">
+                      <tr>
+                          <th scope="col">Property</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Default Value</th>
+                      </tr>
+                  </thead>
 
-                <!--Component Table-->
-                <table class="table table-bordered table-light table-hover">
-                    <thead class="thead-dark component-header">
-                        <th colspan="4">Components</th>
-                    </thead>
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Property</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Default Value</th>
-                        </tr>
-                    </thead>
+                  <tbody>
+                      <thead class="component-breakpoint">
+                          <th colspan="4">Component Properties</th>
+                      </thead>
+                      <tr>
+                          <th scope="row">Gamepad Number</th>
+                          <td>LPK_ControllerNumber</td>
+                          <td>Which gamepad to vibrate.</td>
+                          <td>ONE</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Shake Type</th>
+                          <td>LPK_ShakeType</td>
+                          <td>Which mode to use when shaking the gamepad.</td>
+                          <td>CONSTANT</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Shake Modifiers</th>
+                          <td>Vector2</td>
+                          <td>Set the intensity of the shake on the left and right side of the controller.  Should be a value between 0 and 1.</td>
+                          <td>1, 1</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Cooldown</th>
+                          <td>Float</td>
+                          <td>How long to wait before allowing more vibrations to occur.  The delay starts AFTER a shake has finished.</td>
+                          <td>0</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Vibration Duration</th>
+                          <td>Float</td>
+                          <td>Duration of the controller vibration.</td>
+                          <td>1.5</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Vibration Intensity</th>
+                          <td>Float</td>
+                          <td>Intensity of the controller vibration.</td>
+                          <td>1</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">name</th>
+                          <td>type</td>
+                          <td>description</td>
+                          <td>defaultvalue</td>
+                      </tr>
+                  </tbody>
 
-                    <tbody>
-                        <thead class="component-breakpoint">
-                            <th colspan="4">Component Properties</th>
-                        </thead>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                    </tbody>
 
+              </table>
+              
 
-                </table>
-                
-
-            <!--Class Description Body-->
-        </div>
-    </div>
-
-    <div style="text-align: center">
-        <h1>
-        UNDER CONSTRUCTION
-        </h1>
-        <br><br>
-        <hr>
-        <h2>
-            Click on the help button in the top right to get in contact with Chris or Aeon with any questions you have!
-        </h2>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-
+          <!--Class Description Body-->
+      </div>
     <!--Side Bar-->
     <script src="side_bar_bottom.js"></script>
     <script src="footer.js"></script>
