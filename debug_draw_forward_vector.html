@@ -69,11 +69,11 @@
 
             <!--In Depth Description-->
             <p>
-
+              Use to debug or display an object's game. Freedom goes to the developer over which situations the line is drawn in, and what colour it is.
             </p>
 
             <p>
-                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
+                <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 8</a></b>
             </p>
 
             <!--Component Table-->
@@ -92,32 +92,68 @@
 
                 <tbody>
                     <thead class="component-breakpoint">
-                        <th colspan="4">Component Properties</th>
+                        <th colspan="4">Draw Modes</th>
                     </thead>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Draw in Scene</th>
+                        <td>Boolean</td>
+                        <td>Sets the debug draw to appear in the scene view.</td>
+                        <td>True</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Draw in Game</th>
+                        <td>Boolean</td>
+                        <td>Sets the debug draw to appear in game view.</td>
+                        <td>True</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Draw in Build</th>
+                        <td>Boolean</td>
+                        <td>Sets the debug draw to appear in the built game.</td>
+                        <td>True</td>
                     </tr>
                     <tr>
-                        <th scope="row">name</th>
-                        <td>type</td>
-                        <td>description</td>
-                        <td>defaultvalue</td>
+                        <th scope="row">Draw Hierarchy</th>
+                        <td>Boolean</td>
+                        <td>Whether this object's children should also be drawn.</td>
+                        <td>False</td>
                     </tr>
+                    <thead class="component-breakpoint">
+                      <th colspan="4">Component Properties</th>
+                    </thead>
+                    <tr>
+                      <th scope="row">Length</th>
+                      <td>Float</td>
+                      <td>Length of the line to draw for forward vector.</td>
+                      <td>2.0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Scene Line Color</th>
+                        <td>Color</td>
+                        <td>Color of the debug line if drawn.</td>
+                        <td>255, 0, 0, 255</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Game Renderer Color</th>
+                        <td>Color</td>
+                        <td>Color of the line renderer if drawn in game.</td>
+                        <td>255, 0, 0, 255</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Build Renderer Color</th>
+                        <td>Color</td>
+                        <td>Color of the line renderer if drawn in build.</td>
+                        <td>255, 0, 0, 255</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                      <th colspan="4">Debug Properties</th>
+                  </thead>
+                  <tr>
+                      <th scope="row">Label</th>
+                      <td>String</td>
+                      <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                      <td>None</td>
+                  </tr>
                 </tbody>
 
 

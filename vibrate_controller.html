@@ -130,11 +130,26 @@
                           <td>Intensity of the controller vibration.</td>
                           <td>1</td>
                       </tr>
+                      <thead class="component-breakpoint-light">
+                        <th colspan="4">Point Vibration Properties</th>
+                      </thead>
+                      <tr >
+                          <th scope="row">Vibrate Source</th>
+                          <td>GameObject</td>
+                          <td>Source of the vibration.  If left null, it is owner.</td>
+                          <td>None</td>
+                      </tr>
                       <tr>
-                          <th scope="row">name</th>
-                          <td>type</td>
-                          <td>description</td>
-                          <td>defaultvalue</td>
+                          <th scope="row">Vibrate Receiver</th>
+                          <td>GameObject</td>
+                          <td>Object that represents the point of receiving vibration, such as the player character.</td>
+                          <td>None</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Distance</th>
+                        <td>Float</td>
+                        <td>Minimum distance for vibration to start. Vibration strength will scale dynamically with distance.</td>
+                        <td>10</td>
                       </tr>
                   </tbody>
 

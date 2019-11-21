@@ -47,8 +47,8 @@ document.write(`\
                     <li><a href="dispatch_on_button_input.html">Dispatch On Button Input</a></li>\
                     <li><a href="dispatch_on_gamepad_input.html">Dispatch On Gamepad Input</a></li>\
                     <li><a href="dispatch_on_keyboard_input.html">Dispatch On Keyboard Input</a></li>\
+                    <li><a href="dispatch_on_line_of_sight.html">Dispatch On Line of Sight</a></li>\
                     <li><a href="dispatch_on_mouse_input.html">Dispatch On Mouse Input</a></li>\
-                    <li><a href="dispatch_on_raycast.html">Dispatch On Raycast</a></li>\
                     <li><a href="dispatch_on_start.html">Dispatch On Start</a></li>\
                     <li><a href="dispatch_on_visibility.html">Dispatch On Visibility</a></li>\
                     <li><a href="dispatch_on_collision.html">Dispatch on Collision</a></li>\

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> DragonPack - Template</title>
+    <title> DragonPack - Dispatch on Raycast</title>
     <link rel="icon" href="lpk_logo_smol.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,105 +44,157 @@
     <!--Side Bar-->
     <script src="side_bar_top.js"></script>
 
-    <!--HACKHACK-->
-    <div style="display: none">
     <!--Class Description Body-->
-        <div>
+      <div>
 
-            <!--Class Name-->
-            <classheader>
-                Template
-            </classheader>
+          <!--Class Name-->
+          <classheader>
+            Dispatch on Raycast
+          </classheader>
 
-            <!--LPK File Name-->
-            <filename>
-                template.cs
-            </filename>
+          <!--LPK File Name-->
+          <filename>
+            LPK_DispatchOnRaycast.cs
+          </filename>
 
-            <classdescription>
-                <!--Basic Description-->
-                <p>
-                    Templating
-                </p>
+          <classdescription>
+              <!--Basic Description-->
+              <p>
+                  Raycast between a source and target(s).
+              </p>
 
-                <p>
-                    <b>Suggested use:</b>
-                </p>
+              <p>
+                  <b>Suggested use:</b>
+              </p>
 
-                <!--In Depth Description-->
-                <p>
+              <!--In Depth Description-->
+              <p>
+                Determine if objects are within a certain range, use with colliders to create a line of sight system, or determine if objects are visible at all.
+              </p>
 
-                </p>
+              <p>
+                  <b>Examples found in:  <a href="example_projects.html" target="_blank">Project 8</a></b>
+              </p>
 
-                <p>
-                    <b>Examples found in:  <a href="example_projects.html" target="_blank">Project </a></b>
-                </p>
+              <!--Component Table-->
+              <table class="table table-bordered table-light table-hover">
+                  <thead class="thead-dark component-header">
+                      <th colspan="4">Components</th>
+                  </thead>
+                  <thead class="thead-light">
+                      <tr>
+                          <th scope="col">Property</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Default Value</th>
+                      </tr>
+                  </thead>
 
-                <!--Component Table-->
-                <table class="table table-bordered table-light table-hover">
-                    <thead class="thead-dark component-header">
-                        <th colspan="4">Components</th>
+                  <tbody>
+                      <thead class="component-breakpoint">
+                          <th colspan="4">Component Properties</th>
+                      </thead>
+                      <tr>
+                          <th scope="row">Source Game Object Transform</th>
+                          <td>Transform</td>
+                          <td>Game Object that is casting the ray.</td>
+                          <td>Owner</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Targets</th>
+                          <td>Array of Game Objects</td>
+                          <td>Game Objects the source is casting rays towards.</td>
+                          <td>0</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Tags</th>
+                          <td>Array of Tags (strings)</td>
+                          <td>Tags to try to cast a ray towards.</td>
+                          <td>0</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Search Distance</th>
+                          <td>Float</td>
+                          <td>How far to cast the ray. By default, look forever.</td>
+                          <td>Infinity</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Layer Mask</th>
+                          <td>LayerMask</td>
+                          <td>Layer mask to use for filtering.</td>
+                          <td>Everything</td>
+                      </tr>
+                      <thead class="component-breakpoint">
+                        <th colspan="4">Event Sending Info</th>
                     </thead>
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Property</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Default Value</th>
-                        </tr>
+                    <tr>
+                        <th scope="row">RaycastHitEvent</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met:
+                            <ul>
+                                <li>If a target object is hit by the sources raycast.</li>
+                            </ul>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">RaycastMaintainedEvent</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met:
+                            <ul>
+                                <li>If a target object is persistently hit by the sources raycast.</li>
+                            </ul>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">RaycastLostEvent</th>
+                        <td>LPK Event Object</td>
+                        <td>Event to dispatch when conditions are met:
+                            <ul>
+                                <li>If a target object that was hit by the sources raycast is no longer being hit.</li>
+                            </ul>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Event Sending Mode</th>
+                        <td>LPK Event Sending Mode</td>
+                        <td>Who receives the event sent info when input is given from the input device. OWNER = only send to components on the same game object. ALL = send to all game objects. TAGS = send to specified tags.</td>
+                        <td>TAGS</td>
+                    </tr>
+                    <thead class="component-breakpoint-light">
+                        <th colspan="4">Event Sending Mode - TAGS</th>
                     </thead>
-
-                    <tbody>
-                        <thead class="component-breakpoint">
-                            <th colspan="4">Component Properties</th>
-                        </thead>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">name</th>
-                            <td>type</td>
-                            <td>description</td>
-                            <td>defaultvalue</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <th scope="row">Tags</th>
+                        <td>Array of Tags</td>
+                        <td>Which tags will receive this event.</td>
+                        <td>0</td>
+                    </tr>
+                    <thead class="component-breakpoint">
+                      <th colspan="4">Debug Properties</th>
+                    </thead>
+                    <tr>
+                        <th scope="row">Print Debug Info</th>
+                        <td>Boolean</td>
+                        <td>Toggle console debug messages.</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>String</td>
+                        <td>Notes for the user about this component. This does nothing to the game or build.</td>
+                        <td>None</td>
+                    </tr>
+                  </tbody>
 
 
-                </table>
-                
+              </table>
+              
 
-            <!--Class Description Body-->
-        </div>
-    </div>
-
-    <div style="text-align: center">
-        <h1>
-        UNDER CONSTRUCTION
-        </h1>
-        <br><br>
-        <hr>
-        <h2>
-            Click on the help button in the top right to get in contact with Chris or Aeon with any questions you have!
-        </h2>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-    
-    
+          <!--Class Description Body-->
+      </div>
 
     <!--Side Bar-->
     <script src="side_bar_bottom.js"></script>
