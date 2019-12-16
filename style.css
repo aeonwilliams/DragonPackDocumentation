@@ -123,11 +123,13 @@ classheader {
 
 filename {
     display: block;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #4f5963;
     font-size: 1em;
     margin-bottom: 2.33em;
     margin-left: 1em;
     margin-right: 0;
-    font-style: italic
 }
 
 body {
@@ -140,7 +142,7 @@ classdescription {
     margin-bottom: 1em;
     margin-left: 0;
     margin-right: 0;
-    font-size: 1.2em;
+    font-size: 18px;
 }
 
 .table-light,

@@ -22,3 +22,7 @@ description {
 default-value {
   font-size: 20px;
 }
+
+.components {
+  margin-left: 2em;
+}
